@@ -1,0 +1,3 @@
+This is small translation of Lamport's "three-phase consensus protocol" to multi-threaded Haskell to see if I can follow the protocol.
+
+http://research.microsoft.com/en-us/um/people/lamport/pubs/pubs.html#lamport-paxos
