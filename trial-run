@@ -1,0 +1,1392 @@
+Γ: Announce NextBallot 0;Γ
+A: Announce NextBallot 0;A
+E: Send to A : LastVote 0;A (VNull E)
+∆: Announce NextBallot 0;∆
+Γ: Send to ∆ : LastVote 0;∆ (VNull Γ)
+A: Send to ∆ : LastVote 0;∆ (VNull A)
+E: Announce NextBallot 1;E
+Γ: Send to E : LastVote 1;E (VNull Γ)
+∆: Send to E : LastVote 1;E (VNull ∆)
+A: Send to E : LastVote 1;E (VNull A)
+E: Announce BeginBallot 1;E Decree 1;E
+A: Send to E : Voted 1;E A
+Γ: Send to E : Voted 1;E Γ
+∆: Send to E : Voted 1;E ∆
+E: Announce Success Decree 1;E
+E: Announce NextBallot 2;E
+∆: Send to E : LastVote 2;E (V (Vote {a'bal = 1;E, a'dec = Decree 1;E, a'pst = ∆}))
+Γ: Send to E : LastVote 2;E (V (Vote {a'bal = 1;E, a'dec = Decree 1;E, a'pst = Γ}))
+A: Send to E : LastVote 2;E (V (Vote {a'bal = 1;E, a'dec = Decree 1;E, a'pst = A}))
+E: Announce BeginBallot 2;E Decree 1;E
+A: Send to E : Voted 2;E A
+∆: Send to E : Voted 2;E ∆
+Γ: Send to E : Voted 2;E Γ
+E: Announce Success Decree 1;E
+A: Announce NextBallot 3;A
+B: Send to A : LastVote 3;A (VNull B)
+∆: Send to A : LastVote 3;A (V (Vote {a'bal = 2;E, a'dec = Decree 1;E, a'pst = ∆}))
+Γ: Send to A : LastVote 3;A (V (Vote {a'bal = 2;E, a'dec = Decree 1;E, a'pst = Γ}))
+E: Send to A : LastVote 3;A (V (Vote {a'bal = 2;E, a'dec = Decree 1;E, a'pst = E}))
+A: Announce BeginBallot 3;A Decree 1;E
+B: Send to A : Voted 3;A B
+∆: Send to A : Voted 3;A ∆
+Γ: Send to A : Voted 3;A Γ
+E: Send to A : Voted 3;A E
+A: Announce Success Decree 1;E
+∆: Announce NextBallot 4;∆
+A: Send to ∆ : LastVote 4;∆ (V (Vote {a'bal = 3;A, a'dec = Decree 1;E, a'pst = A}))
+E: Send to ∆ : LastVote 4;∆ (V (Vote {a'bal = 3;A, a'dec = Decree 1;E, a'pst = E}))
+B: Send to ∆ : LastVote 4;∆ (V (Vote {a'bal = 3;A, a'dec = Decree 1;E, a'pst = B}))
+Γ: Send to ∆ : LastVote 4;∆ (V (Vote {a'bal = 3;A, a'dec = Decree 1;E, a'pst = Γ}))
+∆: Announce BeginBallot 4;∆ Decree 1;E
+Γ: Send to ∆ : Voted 4;∆ Γ
+E: Send to ∆ : Voted 4;∆ E
+B: Send to ∆ : Voted 4;∆ B
+A: Send to ∆ : Voted 4;∆ A
+∆: Announce Success Decree 1;E
+E: Announce NextBallot 5;E
+Γ: Send to E : LastVote 5;E (V (Vote {a'bal = 4;∆, a'dec = Decree 1;E, a'pst = Γ}))
+∆: Send to E : LastVote 5;E (V (Vote {a'bal = 4;∆, a'dec = Decree 1;E, a'pst = ∆}))
+A: Send to E : LastVote 5;E (V (Vote {a'bal = 4;∆, a'dec = Decree 1;E, a'pst = A}))
+B: Send to E : LastVote 5;E (V (Vote {a'bal = 4;∆, a'dec = Decree 1;E, a'pst = B}))
+E: Announce BeginBallot 5;E Decree 1;E
+Γ: Send to E : Voted 5;E Γ
+B: Send to E : Voted 5;E B
+A: Send to E : Voted 5;E A
+∆: Send to E : Voted 5;E ∆
+E: Announce Success Decree 1;E
+∆: Announce NextBallot 6;∆
+E: Send to ∆ : LastVote 6;∆ (V (Vote {a'bal = 5;E, a'dec = Decree 1;E, a'pst = E}))
+A: Send to ∆ : LastVote 6;∆ (V (Vote {a'bal = 5;E, a'dec = Decree 1;E, a'pst = A}))
+B: Send to ∆ : LastVote 6;∆ (V (Vote {a'bal = 5;E, a'dec = Decree 1;E, a'pst = B}))
+∆: Announce BeginBallot 6;∆ Decree 1;E
+B: Send to ∆ : Voted 6;∆ B
+E: Send to ∆ : Voted 6;∆ E
+A: Send to ∆ : Voted 6;∆ A
+∆: Announce Success Decree 1;E
+Γ: Announce NextBallot 6;Γ
+∆: Announce NextBallot 7;∆
+E: Send to ∆ : LastVote 7;∆ (V (Vote {a'bal = 6;∆, a'dec = Decree 1;E, a'pst = E}))
+B: Send to ∆ : LastVote 7;∆ (V (Vote {a'bal = 6;∆, a'dec = Decree 1;E, a'pst = B}))
+Γ: Send to ∆ : LastVote 7;∆ (V (Vote {a'bal = 5;E, a'dec = Decree 1;E, a'pst = Γ}))
+A: Send to ∆ : LastVote 7;∆ (V (Vote {a'bal = 6;∆, a'dec = Decree 1;E, a'pst = A}))
+∆: Announce BeginBallot 7;∆ Decree 1;E
+E: Send to ∆ : Voted 7;∆ E
+Γ: Send to ∆ : Voted 7;∆ Γ
+A: Send to ∆ : Voted 7;∆ A
+B: Send to ∆ : Voted 7;∆ B
+∆: Announce Success Decree 1;E
+E: Announce NextBallot 8;E
+B: Send to E : LastVote 8;E (V (Vote {a'bal = 7;∆, a'dec = Decree 1;E, a'pst = B}))
+A: Send to E : LastVote 8;E (V (Vote {a'bal = 7;∆, a'dec = Decree 1;E, a'pst = A}))
+Γ: Send to E : LastVote 8;E (V (Vote {a'bal = 7;∆, a'dec = Decree 1;E, a'pst = Γ}))
+∆: Send to E : LastVote 8;E (V (Vote {a'bal = 7;∆, a'dec = Decree 1;E, a'pst = ∆}))
+E: Announce BeginBallot 8;E Decree 1;E
+Γ: Send to E : Voted 8;E Γ
+B: Send to E : Voted 8;E B
+A: Send to E : Voted 8;E A
+∆: Send to E : Voted 8;E ∆
+E: Announce Success Decree 1;E
+A: Announce NextBallot 9;A
+∆: Send to A : LastVote 9;A (V (Vote {a'bal = 8;E, a'dec = Decree 1;E, a'pst = ∆}))
+Γ: Send to A : LastVote 9;A (V (Vote {a'bal = 8;E, a'dec = Decree 1;E, a'pst = Γ}))
+A: Announce NextBallot 10;A
+E: Send to A : LastVote 10;A (V (Vote {a'bal = 8;E, a'dec = Decree 1;E, a'pst = E}))
+Γ: Send to A : LastVote 10;A (V (Vote {a'bal = 8;E, a'dec = Decree 1;E, a'pst = Γ}))
+E: Announce NextBallot 11;E
+Γ: Send to E : LastVote 11;E (V (Vote {a'bal = 8;E, a'dec = Decree 1;E, a'pst = Γ}))
+A: Send to E : LastVote 11;E (V (Vote {a'bal = 8;E, a'dec = Decree 1;E, a'pst = A}))
+∆: Announce NextBallot 10;∆
+Γ: Announce NextBallot 12;Γ
+∆: Send to Γ : LastVote 12;Γ (V (Vote {a'bal = 8;E, a'dec = Decree 1;E, a'pst = ∆}))
+A: Send to Γ : LastVote 12;Γ (V (Vote {a'bal = 8;E, a'dec = Decree 1;E, a'pst = A}))
+B: Announce NextBallot 9;B
+Γ: Announce NextBallot 13;Γ
+B: Send to Γ : LastVote 13;Γ (V (Vote {a'bal = 8;E, a'dec = Decree 1;E, a'pst = B}))
+∆: Send to Γ : LastVote 13;Γ (V (Vote {a'bal = 8;E, a'dec = Decree 1;E, a'pst = ∆}))
+A: Announce NextBallot 13;A
+∆: Announce NextBallot 14;∆
+Γ: Send to ∆ : LastVote 14;∆ (V (Vote {a'bal = 8;E, a'dec = Decree 1;E, a'pst = Γ}))
+B: Send to ∆ : LastVote 14;∆ (V (Vote {a'bal = 8;E, a'dec = Decree 1;E, a'pst = B}))
+A: Send to ∆ : LastVote 14;∆ (V (Vote {a'bal = 8;E, a'dec = Decree 1;E, a'pst = A}))
+∆: Announce BeginBallot 14;∆ Decree 1;E
+A: Send to ∆ : Voted 14;∆ A
+B: Send to ∆ : Voted 14;∆ B
+Γ: Send to ∆ : Voted 14;∆ Γ
+∆: Announce Success Decree 1;E
+Γ: Announce NextBallot 15;Γ
+A: Send to Γ : LastVote 15;Γ (V (Vote {a'bal = 14;∆, a'dec = Decree 1;E, a'pst = A}))
+B: Send to Γ : LastVote 15;Γ (V (Vote {a'bal = 14;∆, a'dec = Decree 1;E, a'pst = B}))
+Γ: Announce NextBallot 16;Γ
+∆: Send to Γ : LastVote 16;Γ (V (Vote {a'bal = 14;∆, a'dec = Decree 1;E, a'pst = ∆}))
+A: Send to Γ : LastVote 16;Γ (V (Vote {a'bal = 14;∆, a'dec = Decree 1;E, a'pst = A}))
+B: Send to Γ : LastVote 16;Γ (V (Vote {a'bal = 14;∆, a'dec = Decree 1;E, a'pst = B}))
+Γ: Announce BeginBallot 16;Γ Decree 1;E
+B: Send to Γ : Voted 16;Γ B
+A: Send to Γ : Voted 16;Γ A
+∆: Send to Γ : Voted 16;Γ ∆
+Γ: Announce Success Decree 1;E
+E: Announce NextBallot 12;E
+A: Announce NextBallot 17;A
+E: Send to A : LastVote 17;A (V (Vote {a'bal = 8;E, a'dec = Decree 1;E, a'pst = E}))
+B: Send to A : LastVote 17;A (V (Vote {a'bal = 16;Γ, a'dec = Decree 1;E, a'pst = B}))
+E: Announce NextBallot 18;E
+A: Send to E : LastVote 18;E (V (Vote {a'bal = 16;Γ, a'dec = Decree 1;E, a'pst = A}))
+B: Send to E : LastVote 18;E (V (Vote {a'bal = 16;Γ, a'dec = Decree 1;E, a'pst = B}))
+B: Announce NextBallot 19;B
+A: Send to B : LastVote 19;B (V (Vote {a'bal = 16;Γ, a'dec = Decree 1;E, a'pst = A}))
+E: Send to B : LastVote 19;B (V (Vote {a'bal = 8;E, a'dec = Decree 1;E, a'pst = E}))
+∆: Announce NextBallot 17;∆
+∆: Announce NextBallot 18;∆
+B: Announce NextBallot 20;B
+Γ: Send to B : LastVote 20;B (V (Vote {a'bal = 16;Γ, a'dec = Decree 1;E, a'pst = Γ}))
+A: Send to B : LastVote 20;B (V (Vote {a'bal = 16;Γ, a'dec = Decree 1;E, a'pst = A}))
+∆: Send to B : LastVote 20;B (V (Vote {a'bal = 16;Γ, a'dec = Decree 1;E, a'pst = ∆}))
+B: Announce BeginBallot 20;B Decree 1;E
+∆: Send to B : Voted 20;B ∆
+Γ: Send to B : Voted 20;B Γ
+A: Send to B : Voted 20;B A
+B: Announce Success Decree 1;E
+Γ: Announce NextBallot 21;Γ
+B: Send to Γ : LastVote 21;Γ (V (Vote {a'bal = 20;B, a'dec = Decree 1;E, a'pst = B}))
+A: Send to Γ : LastVote 21;Γ (V (Vote {a'bal = 20;B, a'dec = Decree 1;E, a'pst = A}))
+E: Send to Γ : LastVote 21;Γ (V (Vote {a'bal = 8;E, a'dec = Decree 1;E, a'pst = E}))
+∆: Send to Γ : LastVote 21;Γ (V (Vote {a'bal = 20;B, a'dec = Decree 1;E, a'pst = ∆}))
+Γ: Announce BeginBallot 21;Γ Decree 1;E
+B: Send to Γ : Voted 21;Γ B
+∆: Send to Γ : Voted 21;Γ ∆
+E: Send to Γ : Voted 21;Γ E
+A: Send to Γ : Voted 21;Γ A
+Γ: Announce Success Decree 1;E
+B: Announce NextBallot 22;B
+∆: Send to B : LastVote 22;B (V (Vote {a'bal = 21;Γ, a'dec = Decree 1;E, a'pst = ∆}))
+Γ: Send to B : LastVote 22;B (V (Vote {a'bal = 21;Γ, a'dec = Decree 1;E, a'pst = Γ}))
+A: Send to B : LastVote 22;B (V (Vote {a'bal = 21;Γ, a'dec = Decree 1;E, a'pst = A}))
+E: Send to B : LastVote 22;B (V (Vote {a'bal = 21;Γ, a'dec = Decree 1;E, a'pst = E}))
+B: Announce BeginBallot 22;B Decree 1;E
+Γ: Send to B : Voted 22;B Γ
+E: Send to B : Voted 22;B E
+∆: Send to B : Voted 22;B ∆
+A: Send to B : Voted 22;B A
+B: Announce Success Decree 1;E
+∆: Announce NextBallot 23;∆
+Γ: Send to ∆ : LastVote 23;∆ (V (Vote {a'bal = 22;B, a'dec = Decree 1;E, a'pst = Γ}))
+E: Send to ∆ : LastVote 23;∆ (V (Vote {a'bal = 22;B, a'dec = Decree 1;E, a'pst = E}))
+A: Announce NextBallot 23;A
+B: Send to A : LastVote 23;A (V (Vote {a'bal = 22;B, a'dec = Decree 1;E, a'pst = B}))
+E: Announce NextBallot 24;E
+Γ: Send to E : LastVote 24;E (V (Vote {a'bal = 22;B, a'dec = Decree 1;E, a'pst = Γ}))
+∆: Send to E : LastVote 24;E (V (Vote {a'bal = 22;B, a'dec = Decree 1;E, a'pst = ∆}))
+A: Send to E : LastVote 24;E (V (Vote {a'bal = 22;B, a'dec = Decree 1;E, a'pst = A}))
+E: Announce BeginBallot 24;E Decree 1;E
+∆: Send to E : Voted 24;E ∆
+Γ: Send to E : Voted 24;E Γ
+A: Send to E : Voted 24;E A
+E: Announce Success Decree 1;E
+E: Announce NextBallot 25;E
+B: Send to E : LastVote 25;E (V (Vote {a'bal = 22;B, a'dec = Decree 1;E, a'pst = B}))
+Γ: Send to E : LastVote 25;E (V (Vote {a'bal = 24;E, a'dec = Decree 1;E, a'pst = Γ}))
+B: Announce NextBallot 26;B
+E: Send to B : LastVote 26;B (V (Vote {a'bal = 24;E, a'dec = Decree 1;E, a'pst = E}))
+Γ: Announce NextBallot 26;Γ
+B: Send to Γ : LastVote 26;Γ (V (Vote {a'bal = 22;B, a'dec = Decree 1;E, a'pst = B}))
+E: Send to Γ : LastVote 26;Γ (V (Vote {a'bal = 24;E, a'dec = Decree 1;E, a'pst = E}))
+A: Announce NextBallot 25;A
+∆: Announce NextBallot 25;∆
+A: Send to ∆ : LastVote 25;∆ (V (Vote {a'bal = 24;E, a'dec = Decree 1;E, a'pst = A}))
+A: Announce NextBallot 26;A
+∆: Send to A : LastVote 26;A (V (Vote {a'bal = 24;E, a'dec = Decree 1;E, a'pst = ∆}))
+∆: Announce NextBallot 27;∆
+Γ: Send to ∆ : LastVote 27;∆ (V (Vote {a'bal = 24;E, a'dec = Decree 1;E, a'pst = Γ}))
+B: Announce NextBallot 27;B
+A: Send to B : LastVote 27;B (V (Vote {a'bal = 24;E, a'dec = Decree 1;E, a'pst = A}))
+A: Announce NextBallot 28;A
+B: Send to A : LastVote 28;A (V (Vote {a'bal = 22;B, a'dec = Decree 1;E, a'pst = B}))
+∆: Send to A : LastVote 28;A (V (Vote {a'bal = 24;E, a'dec = Decree 1;E, a'pst = ∆}))
+∆: Announce NextBallot 29;∆
+B: Send to ∆ : LastVote 29;∆ (V (Vote {a'bal = 22;B, a'dec = Decree 1;E, a'pst = B}))
+A: Send to ∆ : LastVote 29;∆ (V (Vote {a'bal = 24;E, a'dec = Decree 1;E, a'pst = A}))
+E: Announce NextBallot 27;E
+∆: Announce NextBallot 30;∆
+Γ: Send to ∆ : LastVote 30;∆ (V (Vote {a'bal = 24;E, a'dec = Decree 1;E, a'pst = Γ}))
+E: Send to ∆ : LastVote 30;∆ (V (Vote {a'bal = 24;E, a'dec = Decree 1;E, a'pst = E}))
+B: Send to ∆ : LastVote 30;∆ (V (Vote {a'bal = 22;B, a'dec = Decree 1;E, a'pst = B}))
+A: Send to ∆ : LastVote 30;∆ (V (Vote {a'bal = 24;E, a'dec = Decree 1;E, a'pst = A}))
+∆: Announce BeginBallot 30;∆ Decree 1;E
+A: Send to ∆ : Voted 30;∆ A
+Γ: Send to ∆ : Voted 30;∆ Γ
+B: Send to ∆ : Voted 30;∆ B
+E: Send to ∆ : Voted 30;∆ E
+∆: Announce Success Decree 1;E
+B: Announce NextBallot 31;B
+E: Send to B : LastVote 31;B (V (Vote {a'bal = 30;∆, a'dec = Decree 1;E, a'pst = E}))
+Γ: Send to B : LastVote 31;B (V (Vote {a'bal = 30;∆, a'dec = Decree 1;E, a'pst = Γ}))
+∆: Announce NextBallot 31;∆
+B: Send to ∆ : LastVote 31;∆ (V (Vote {a'bal = 30;∆, a'dec = Decree 1;E, a'pst = B}))
+Γ: Send to ∆ : LastVote 31;∆ (V (Vote {a'bal = 30;∆, a'dec = Decree 1;E, a'pst = Γ}))
+A: Send to ∆ : LastVote 31;∆ (V (Vote {a'bal = 30;∆, a'dec = Decree 1;E, a'pst = A}))
+∆: Announce BeginBallot 31;∆ Decree 1;E
+Γ: Send to ∆ : Voted 31;∆ Γ
+B: Send to ∆ : Voted 31;∆ B
+A: Send to ∆ : Voted 31;∆ A
+∆: Announce Success Decree 1;E
+B: Announce NextBallot 32;B
+∆: Send to B : LastVote 32;B (V (Vote {a'bal = 31;∆, a'dec = Decree 1;E, a'pst = ∆}))
+Γ: Announce NextBallot 32;Γ
+B: Send to Γ : LastVote 32;Γ (V (Vote {a'bal = 31;∆, a'dec = Decree 1;E, a'pst = B}))
+B: Announce NextBallot 33;B
+Γ: Send to B : LastVote 33;B (V (Vote {a'bal = 31;∆, a'dec = Decree 1;E, a'pst = Γ}))
+E: Announce NextBallot 32;E
+∆: Send to E : LastVote 32;E (V (Vote {a'bal = 31;∆, a'dec = Decree 1;E, a'pst = ∆}))
+A: Send to E : LastVote 32;E (V (Vote {a'bal = 31;∆, a'dec = Decree 1;E, a'pst = A}))
+B: Announce NextBallot 34;B
+∆: Send to B : LastVote 34;B (V (Vote {a'bal = 31;∆, a'dec = Decree 1;E, a'pst = ∆}))
+E: Send to B : LastVote 34;B (V (Vote {a'bal = 30;∆, a'dec = Decree 1;E, a'pst = E}))
+Γ: Send to B : LastVote 34;B (V (Vote {a'bal = 31;∆, a'dec = Decree 1;E, a'pst = Γ}))
+B: Announce BeginBallot 34;B Decree 1;E
+Γ: Send to B : Voted 34;B Γ
+∆: Send to B : Voted 34;B ∆
+E: Send to B : Voted 34;B E
+B: Announce Success Decree 1;E
+∆: Announce NextBallot 35;∆
+E: Send to ∆ : LastVote 35;∆ (V (Vote {a'bal = 34;B, a'dec = Decree 1;E, a'pst = E}))
+Γ: Send to ∆ : LastVote 35;∆ (V (Vote {a'bal = 34;B, a'dec = Decree 1;E, a'pst = Γ}))
+Γ: Announce NextBallot 36;Γ
+A: Send to Γ : LastVote 36;Γ (V (Vote {a'bal = 31;∆, a'dec = Decree 1;E, a'pst = A}))
+E: Send to Γ : LastVote 36;Γ (V (Vote {a'bal = 34;B, a'dec = Decree 1;E, a'pst = E}))
+B: Send to Γ : LastVote 36;Γ (V (Vote {a'bal = 34;B, a'dec = Decree 1;E, a'pst = B}))
+Γ: Announce BeginBallot 36;Γ Decree 1;E
+A: Send to Γ : Voted 36;Γ A
+E: Send to Γ : Voted 36;Γ E
+B: Send to Γ : Voted 36;Γ B
+Γ: Announce Success Decree 1;E
+E: Announce NextBallot 37;E
+B: Send to E : LastVote 37;E (V (Vote {a'bal = 36;Γ, a'dec = Decree 1;E, a'pst = B}))
+A: Send to E : LastVote 37;E (V (Vote {a'bal = 36;Γ, a'dec = Decree 1;E, a'pst = A}))
+A: Announce NextBallot 38;A
+B: Send to A : LastVote 38;A (V (Vote {a'bal = 36;Γ, a'dec = Decree 1;E, a'pst = B}))
+E: Send to A : LastVote 38;A (V (Vote {a'bal = 36;Γ, a'dec = Decree 1;E, a'pst = E}))
+E: Announce NextBallot 39;E
+A: Send to E : LastVote 39;E (V (Vote {a'bal = 36;Γ, a'dec = Decree 1;E, a'pst = A}))
+Γ: Announce NextBallot 37;Γ
+E: Announce NextBallot 40;E
+Γ: Send to E : LastVote 40;E (V (Vote {a'bal = 36;Γ, a'dec = Decree 1;E, a'pst = Γ}))
+B: Send to E : LastVote 40;E (V (Vote {a'bal = 36;Γ, a'dec = Decree 1;E, a'pst = B}))
+∆: Send to E : LastVote 40;E (V (Vote {a'bal = 34;B, a'dec = Decree 1;E, a'pst = ∆}))
+E: Announce BeginBallot 40;E Decree 1;E
+∆: Send to E : Voted 40;E ∆
+Γ: Send to E : Voted 40;E Γ
+B: Send to E : Voted 40;E B
+E: Announce Success Decree 1;E
+∆: Announce NextBallot 41;∆
+Γ: Send to ∆ : LastVote 41;∆ (V (Vote {a'bal = 40;E, a'dec = Decree 1;E, a'pst = Γ}))
+B: Send to ∆ : LastVote 41;∆ (V (Vote {a'bal = 40;E, a'dec = Decree 1;E, a'pst = B}))
+E: Send to ∆ : LastVote 41;∆ (V (Vote {a'bal = 40;E, a'dec = Decree 1;E, a'pst = E}))
+∆: Announce BeginBallot 41;∆ Decree 1;E
+B: Send to ∆ : Voted 41;∆ B
+E: Send to ∆ : Voted 41;∆ E
+Γ: Send to ∆ : Voted 41;∆ Γ
+∆: Announce Success Decree 1;E
+B: Announce NextBallot 42;B
+Γ: Send to B : LastVote 42;B (V (Vote {a'bal = 41;∆, a'dec = Decree 1;E, a'pst = Γ}))
+E: Send to B : LastVote 42;B (V (Vote {a'bal = 41;∆, a'dec = Decree 1;E, a'pst = E}))
+A: Send to B : LastVote 42;B (V (Vote {a'bal = 36;Γ, a'dec = Decree 1;E, a'pst = A}))
+B: Announce BeginBallot 42;B Decree 1;E
+Γ: Send to B : Voted 42;B Γ
+E: Send to B : Voted 42;B E
+A: Send to B : Voted 42;B A
+B: Announce Success Decree 1;E
+∆: Announce NextBallot 42;∆
+A: Send to ∆ : LastVote 42;∆ (V (Vote {a'bal = 42;B, a'dec = Decree 1;E, a'pst = A}))
+E: Send to ∆ : LastVote 42;∆ (V (Vote {a'bal = 42;B, a'dec = Decree 1;E, a'pst = E}))
+Γ: Send to ∆ : LastVote 42;∆ (V (Vote {a'bal = 42;B, a'dec = Decree 1;E, a'pst = Γ}))
+B: Send to ∆ : LastVote 42;∆ (V (Vote {a'bal = 42;B, a'dec = Decree 1;E, a'pst = B}))
+∆: Announce BeginBallot 42;∆ Decree 1;E
+E: Send to ∆ : Voted 42;∆ E
+Γ: Send to ∆ : Voted 42;∆ Γ
+B: Send to ∆ : Voted 42;∆ B
+A: Send to ∆ : Voted 42;∆ A
+∆: Announce Success Decree 1;E
+A: Announce NextBallot 43;A
+B: Send to A : LastVote 43;A (V (Vote {a'bal = 42;∆, a'dec = Decree 1;E, a'pst = B}))
+∆: Send to A : LastVote 43;A (V (Vote {a'bal = 42;∆, a'dec = Decree 1;E, a'pst = ∆}))
+Γ: Send to A : LastVote 43;A (V (Vote {a'bal = 42;∆, a'dec = Decree 1;E, a'pst = Γ}))
+A: Announce BeginBallot 43;A Decree 1;E
+E: Send to A : LastVote 43;A (V (Vote {a'bal = 42;∆, a'dec = Decree 1;E, a'pst = E}))
+B: Send to A : Voted 43;A B
+E: Send to A : Voted 43;A E
+∆: Send to A : Voted 43;A ∆
+Γ: Send to A : Voted 43;A Γ
+A: Announce Success Decree 1;E
+E: Announce NextBallot 44;E
+A: Send to E : LastVote 44;E (V (Vote {a'bal = 43;A, a'dec = Decree 1;E, a'pst = A}))
+∆: Send to E : LastVote 44;E (V (Vote {a'bal = 43;A, a'dec = Decree 1;E, a'pst = ∆}))
+Γ: Send to E : LastVote 44;E (V (Vote {a'bal = 43;A, a'dec = Decree 1;E, a'pst = Γ}))
+B: Send to E : LastVote 44;E (V (Vote {a'bal = 43;A, a'dec = Decree 1;E, a'pst = B}))
+E: Announce BeginBallot 44;E Decree 1;E
+∆: Send to E : Voted 44;E ∆
+B: Send to E : Voted 44;E B
+Γ: Send to E : Voted 44;E Γ
+A: Send to E : Voted 44;E A
+E: Announce Success Decree 1;E
+A: Announce NextBallot 45;A
+B: Send to A : LastVote 45;A (V (Vote {a'bal = 44;E, a'dec = Decree 1;E, a'pst = B}))
+∆: Send to A : LastVote 45;A (V (Vote {a'bal = 44;E, a'dec = Decree 1;E, a'pst = ∆}))
+Γ: Send to A : LastVote 45;A (V (Vote {a'bal = 44;E, a'dec = Decree 1;E, a'pst = Γ}))
+E: Send to A : LastVote 45;A (V (Vote {a'bal = 44;E, a'dec = Decree 1;E, a'pst = E}))
+A: Announce BeginBallot 45;A Decree 1;E
+B: Send to A : Voted 45;A B
+E: Send to A : Voted 45;A E
+∆: Send to A : Voted 45;A ∆
+Γ: Send to A : Voted 45;A Γ
+A: Announce Success Decree 1;E
+E: Announce NextBallot 46;E
+A: Send to E : LastVote 46;E (V (Vote {a'bal = 45;A, a'dec = Decree 1;E, a'pst = A}))
+∆: Send to E : LastVote 46;E (V (Vote {a'bal = 45;A, a'dec = Decree 1;E, a'pst = ∆}))
+Γ: Send to E : LastVote 46;E (V (Vote {a'bal = 45;A, a'dec = Decree 1;E, a'pst = Γ}))
+B: Send to E : LastVote 46;E (V (Vote {a'bal = 45;A, a'dec = Decree 1;E, a'pst = B}))
+E: Announce BeginBallot 46;E Decree 1;E
+∆: Send to E : Voted 46;E ∆
+Γ: Send to E : Voted 46;E Γ
+B: Send to E : Voted 46;E B
+A: Send to E : Voted 46;E A
+E: Announce Success Decree 1;E
+A: Announce NextBallot 47;A
+B: Send to A : LastVote 47;A (V (Vote {a'bal = 46;E, a'dec = Decree 1;E, a'pst = B}))
+∆: Send to A : LastVote 47;A (V (Vote {a'bal = 46;E, a'dec = Decree 1;E, a'pst = ∆}))
+E: Send to A : LastVote 47;A (V (Vote {a'bal = 46;E, a'dec = Decree 1;E, a'pst = E}))
+A: Announce BeginBallot 47;A Decree 1;E
+∆: Send to A : Voted 47;A ∆
+B: Send to A : Voted 47;A B
+E: Send to A : Voted 47;A E
+A: Announce Success Decree 1;E
+∆: Announce NextBallot 48;∆
+A: Send to ∆ : LastVote 48;∆ (V (Vote {a'bal = 47;A, a'dec = Decree 1;E, a'pst = A}))
+E: Send to ∆ : LastVote 48;∆ (V (Vote {a'bal = 47;A, a'dec = Decree 1;E, a'pst = E}))
+Γ: Announce NextBallot 47;Γ
+B: Announce NextBallot 48;B
+Γ: Send to B : LastVote 48;B (V (Vote {a'bal = 46;E, a'dec = Decree 1;E, a'pst = Γ}))
+E: Announce NextBallot 49;E
+B: Send to E : LastVote 49;E (V (Vote {a'bal = 47;A, a'dec = Decree 1;E, a'pst = B}))
+B: Announce NextBallot 50;B
+E: Send to B : LastVote 50;B (V (Vote {a'bal = 47;A, a'dec = Decree 1;E, a'pst = E}))
+A: Send to B : LastVote 50;B (V (Vote {a'bal = 47;A, a'dec = Decree 1;E, a'pst = A}))
+E: Announce NextBallot 51;E
+A: Send to E : LastVote 51;E (V (Vote {a'bal = 47;A, a'dec = Decree 1;E, a'pst = A}))
+B: Send to E : LastVote 51;E (V (Vote {a'bal = 47;A, a'dec = Decree 1;E, a'pst = B}))
+Γ: Send to E : LastVote 51;E (V (Vote {a'bal = 46;E, a'dec = Decree 1;E, a'pst = Γ}))
+E: Announce BeginBallot 51;E Decree 1;E
+A: Send to E : Voted 51;E A
+Γ: Send to E : Voted 51;E Γ
+B: Send to E : Voted 51;E B
+E: Announce Success Decree 1;E
+A: Announce NextBallot 52;A
+E: Send to A : LastVote 52;A (V (Vote {a'bal = 51;E, a'dec = Decree 1;E, a'pst = E}))
+B: Send to A : LastVote 52;A (V (Vote {a'bal = 51;E, a'dec = Decree 1;E, a'pst = B}))
+∆: Announce NextBallot 49;∆
+∆: Announce NextBallot 50;∆
+Γ: Announce NextBallot 52;Γ
+∆: Send to Γ : LastVote 52;Γ (V (Vote {a'bal = 47;A, a'dec = Decree 1;E, a'pst = ∆}))
+A: Send to Γ : LastVote 52;Γ (V (Vote {a'bal = 51;E, a'dec = Decree 1;E, a'pst = A}))
+∆: Announce NextBallot 53;∆
+B: Send to ∆ : LastVote 53;∆ (V (Vote {a'bal = 51;E, a'dec = Decree 1;E, a'pst = B}))
+B: Announce NextBallot 54;B
+E: Send to B : LastVote 54;B (V (Vote {a'bal = 51;E, a'dec = Decree 1;E, a'pst = E}))
+∆: Send to B : LastVote 54;B (V (Vote {a'bal = 47;A, a'dec = Decree 1;E, a'pst = ∆}))
+Γ: Announce NextBallot 53;Γ
+A: Announce NextBallot 53;A
+∆: Announce NextBallot 55;∆
+A: Send to ∆ : LastVote 55;∆ (V (Vote {a'bal = 51;E, a'dec = Decree 1;E, a'pst = A}))
+B: Send to ∆ : LastVote 55;∆ (V (Vote {a'bal = 51;E, a'dec = Decree 1;E, a'pst = B}))
+E: Send to ∆ : LastVote 55;∆ (V (Vote {a'bal = 51;E, a'dec = Decree 1;E, a'pst = E}))
+Γ: Send to ∆ : LastVote 55;∆ (V (Vote {a'bal = 51;E, a'dec = Decree 1;E, a'pst = Γ}))
+∆: Announce BeginBallot 55;∆ Decree 1;E
+E: Send to ∆ : Voted 55;∆ E
+A: Send to ∆ : Voted 55;∆ A
+B: Send to ∆ : Voted 55;∆ B
+Γ: Send to ∆ : Voted 55;∆ Γ
+∆: Announce Success Decree 1;E
+Γ: Announce NextBallot 56;Γ
+A: Send to Γ : LastVote 56;Γ (V (Vote {a'bal = 55;∆, a'dec = Decree 1;E, a'pst = A}))
+∆: Announce NextBallot 56;∆
+Γ: Send to ∆ : LastVote 56;∆ (V (Vote {a'bal = 55;∆, a'dec = Decree 1;E, a'pst = Γ}))
+A: Send to ∆ : LastVote 56;∆ (V (Vote {a'bal = 55;∆, a'dec = Decree 1;E, a'pst = A}))
+A: Announce NextBallot 57;A
+Γ: Send to A : LastVote 57;A (V (Vote {a'bal = 55;∆, a'dec = Decree 1;E, a'pst = Γ}))
+∆: Send to A : LastVote 57;A (V (Vote {a'bal = 55;∆, a'dec = Decree 1;E, a'pst = ∆}))
+E: Announce NextBallot 56;E
+B: Announce NextBallot 56;B
+E: Announce NextBallot 57;E
+Γ: Send to E : LastVote 57;E (V (Vote {a'bal = 55;∆, a'dec = Decree 1;E, a'pst = Γ}))
+B: Send to E : LastVote 57;E (V (Vote {a'bal = 55;∆, a'dec = Decree 1;E, a'pst = B}))
+∆: Send to E : LastVote 57;E (V (Vote {a'bal = 55;∆, a'dec = Decree 1;E, a'pst = ∆}))
+E: Announce BeginBallot 57;E Decree 1;E
+B: Send to E : Voted 57;E B
+∆: Send to E : Voted 57;E ∆
+Γ: Send to E : Voted 57;E Γ
+E: Announce Success Decree 1;E
+A: Announce NextBallot 58;A
+∆: Send to A : LastVote 58;A (V (Vote {a'bal = 57;E, a'dec = Decree 1;E, a'pst = ∆}))
+E: Send to A : LastVote 58;A (V (Vote {a'bal = 57;E, a'dec = Decree 1;E, a'pst = E}))
+B: Send to A : LastVote 58;A (V (Vote {a'bal = 57;E, a'dec = Decree 1;E, a'pst = B}))
+A: Announce BeginBallot 58;A Decree 1;E
+B: Send to A : Voted 58;A B
+∆: Send to A : Voted 58;A ∆
+E: Send to A : Voted 58;A E
+A: Announce Success Decree 1;E
+A: Announce NextBallot 59;A
+B: Send to A : LastVote 59;A (V (Vote {a'bal = 58;A, a'dec = Decree 1;E, a'pst = B}))
+E: Send to A : LastVote 59;A (V (Vote {a'bal = 58;A, a'dec = Decree 1;E, a'pst = E}))
+∆: Send to A : LastVote 59;A (V (Vote {a'bal = 58;A, a'dec = Decree 1;E, a'pst = ∆}))
+A: Announce BeginBallot 59;A Decree 1;E
+B: Send to A : Voted 59;A B
+∆: Send to A : Voted 59;A ∆
+E: Send to A : Voted 59;A E
+A: Announce Success Decree 1;E
+E: Announce NextBallot 60;E
+∆: Send to E : LastVote 60;E (V (Vote {a'bal = 59;A, a'dec = Decree 1;E, a'pst = ∆}))
+B: Announce NextBallot 60;B
+A: Send to B : LastVote 60;B (V (Vote {a'bal = 59;A, a'dec = Decree 1;E, a'pst = A}))
+Γ: Send to B : LastVote 60;B (V (Vote {a'bal = 57;E, a'dec = Decree 1;E, a'pst = Γ}))
+∆: Announce NextBallot 61;∆
+B: Send to ∆ : LastVote 61;∆ (V (Vote {a'bal = 59;A, a'dec = Decree 1;E, a'pst = B}))
+A: Send to ∆ : LastVote 61;∆ (V (Vote {a'bal = 59;A, a'dec = Decree 1;E, a'pst = A}))
+Γ: Send to ∆ : LastVote 61;∆ (V (Vote {a'bal = 57;E, a'dec = Decree 1;E, a'pst = Γ}))
+∆: Announce BeginBallot 61;∆ Decree 1;E
+B: Send to ∆ : Voted 61;∆ B
+Γ: Send to ∆ : Voted 61;∆ Γ
+A: Send to ∆ : Voted 61;∆ A
+∆: Announce Success Decree 1;E
+A: Announce NextBallot 62;A
+∆: Send to A : LastVote 62;A (V (Vote {a'bal = 61;∆, a'dec = Decree 1;E, a'pst = ∆}))
+Γ: Send to A : LastVote 62;A (V (Vote {a'bal = 61;∆, a'dec = Decree 1;E, a'pst = Γ}))
+Γ: Announce NextBallot 63;Γ
+A: Send to Γ : LastVote 63;Γ (V (Vote {a'bal = 61;∆, a'dec = Decree 1;E, a'pst = A}))
+∆: Send to Γ : LastVote 63;Γ (V (Vote {a'bal = 61;∆, a'dec = Decree 1;E, a'pst = ∆}))
+A: Announce NextBallot 64;A
+Γ: Send to A : LastVote 64;A (V (Vote {a'bal = 61;∆, a'dec = Decree 1;E, a'pst = Γ}))
+∆: Announce NextBallot 64;∆
+Γ: Send to ∆ : LastVote 64;∆ (V (Vote {a'bal = 61;∆, a'dec = Decree 1;E, a'pst = Γ}))
+A: Send to ∆ : LastVote 64;∆ (V (Vote {a'bal = 61;∆, a'dec = Decree 1;E, a'pst = A}))
+E: Announce NextBallot 61;E
+Γ: Announce NextBallot 65;Γ
+A: Send to Γ : LastVote 65;Γ (V (Vote {a'bal = 61;∆, a'dec = Decree 1;E, a'pst = A}))
+E: Send to Γ : LastVote 65;Γ (V (Vote {a'bal = 59;A, a'dec = Decree 1;E, a'pst = E}))
+B: Send to Γ : LastVote 65;Γ (V (Vote {a'bal = 61;∆, a'dec = Decree 1;E, a'pst = B}))
+∆: Send to Γ : LastVote 65;Γ (V (Vote {a'bal = 61;∆, a'dec = Decree 1;E, a'pst = ∆}))
+Γ: Announce BeginBallot 65;Γ Decree 1;E
+A: Send to Γ : Voted 65;Γ A
+∆: Send to Γ : Voted 65;Γ ∆
+E: Send to Γ : Voted 65;Γ E
+B: Send to Γ : Voted 65;Γ B
+Γ: Announce Success Decree 1;E
+A: Announce NextBallot 66;A
+B: Send to A : LastVote 66;A (V (Vote {a'bal = 65;Γ, a'dec = Decree 1;E, a'pst = B}))
+Γ: Send to A : LastVote 66;A (V (Vote {a'bal = 65;Γ, a'dec = Decree 1;E, a'pst = Γ}))
+E: Announce NextBallot 66;E
+B: Send to E : LastVote 66;E (V (Vote {a'bal = 65;Γ, a'dec = Decree 1;E, a'pst = B}))
+Γ: Send to E : LastVote 66;E (V (Vote {a'bal = 65;Γ, a'dec = Decree 1;E, a'pst = Γ}))
+A: Announce NextBallot 67;A
+B: Send to A : LastVote 67;A (V (Vote {a'bal = 65;Γ, a'dec = Decree 1;E, a'pst = B}))
+Γ: Send to A : LastVote 67;A (V (Vote {a'bal = 65;Γ, a'dec = Decree 1;E, a'pst = Γ}))
+E: Send to A : LastVote 67;A (V (Vote {a'bal = 65;Γ, a'dec = Decree 1;E, a'pst = E}))
+A: Announce BeginBallot 67;A Decree 1;E
+B: Send to A : Voted 67;A B
+E: Send to A : Voted 67;A E
+Γ: Send to A : Voted 67;A Γ
+A: Announce Success Decree 1;E
+E: Announce NextBallot 68;E
+Γ: Send to E : LastVote 68;E (V (Vote {a'bal = 67;A, a'dec = Decree 1;E, a'pst = Γ}))
+A: Send to E : LastVote 68;E (V (Vote {a'bal = 67;A, a'dec = Decree 1;E, a'pst = A}))
+B: Send to E : LastVote 68;E (V (Vote {a'bal = 67;A, a'dec = Decree 1;E, a'pst = B}))
+E: Announce BeginBallot 68;E Decree 1;E
+∆: Send to E : LastVote 68;E (V (Vote {a'bal = 65;Γ, a'dec = Decree 1;E, a'pst = ∆}))
+A: Send to E : Voted 68;E A
+B: Send to E : Voted 68;E B
+∆: Send to E : Voted 68;E ∆
+Γ: Send to E : Voted 68;E Γ
+E: Announce Success Decree 1;E
+A: Announce NextBallot 69;A
+B: Send to A : LastVote 69;A (V (Vote {a'bal = 68;E, a'dec = Decree 1;E, a'pst = B}))
+Γ: Send to A : LastVote 69;A (V (Vote {a'bal = 68;E, a'dec = Decree 1;E, a'pst = Γ}))
+∆: Send to A : LastVote 69;A (V (Vote {a'bal = 68;E, a'dec = Decree 1;E, a'pst = ∆}))
+E: Send to A : LastVote 69;A (V (Vote {a'bal = 68;E, a'dec = Decree 1;E, a'pst = E}))
+A: Announce BeginBallot 69;A Decree 1;E
+B: Send to A : Voted 69;A B
+∆: Send to A : Voted 69;A ∆
+E: Send to A : Voted 69;A E
+Γ: Send to A : Voted 69;A Γ
+A: Announce Success Decree 1;E
+Γ: Announce NextBallot 70;Γ
+∆: Send to Γ : LastVote 70;Γ (V (Vote {a'bal = 69;A, a'dec = Decree 1;E, a'pst = ∆}))
+B: Send to Γ : LastVote 70;Γ (V (Vote {a'bal = 69;A, a'dec = Decree 1;E, a'pst = B}))
+E: Send to Γ : LastVote 70;Γ (V (Vote {a'bal = 69;A, a'dec = Decree 1;E, a'pst = E}))
+A: Send to Γ : LastVote 70;Γ (V (Vote {a'bal = 69;A, a'dec = Decree 1;E, a'pst = A}))
+Γ: Announce BeginBallot 70;Γ Decree 1;E
+E: Send to Γ : Voted 70;Γ E
+∆: Send to Γ : Voted 70;Γ ∆
+B: Send to Γ : Voted 70;Γ B
+A: Send to Γ : Voted 70;Γ A
+Γ: Announce Success Decree 1;E
+A: Announce NextBallot 71;A
+B: Send to A : LastVote 71;A (V (Vote {a'bal = 70;Γ, a'dec = Decree 1;E, a'pst = B}))
+Γ: Send to A : LastVote 71;A (V (Vote {a'bal = 70;Γ, a'dec = Decree 1;E, a'pst = Γ}))
+E: Send to A : LastVote 71;A (V (Vote {a'bal = 70;Γ, a'dec = Decree 1;E, a'pst = E}))
+∆: Send to A : LastVote 71;A (V (Vote {a'bal = 70;Γ, a'dec = Decree 1;E, a'pst = ∆}))
+A: Announce BeginBallot 71;A Decree 1;E
+Γ: Send to A : Voted 71;A Γ
+E: Send to A : Voted 71;A E
+∆: Send to A : Voted 71;A ∆
+B: Send to A : Voted 71;A B
+A: Announce Success Decree 1;E
+B: Announce NextBallot 72;B
+A: Send to B : LastVote 72;B (V (Vote {a'bal = 71;A, a'dec = Decree 1;E, a'pst = A}))
+Γ: Send to B : LastVote 72;B (V (Vote {a'bal = 71;A, a'dec = Decree 1;E, a'pst = Γ}))
+E: Send to B : LastVote 72;B (V (Vote {a'bal = 71;A, a'dec = Decree 1;E, a'pst = E}))
+∆: Send to B : LastVote 72;B (V (Vote {a'bal = 71;A, a'dec = Decree 1;E, a'pst = ∆}))
+B: Announce BeginBallot 72;B Decree 1;E
+∆: Send to B : Voted 72;B ∆
+E: Send to B : Voted 72;B E
+A: Send to B : Voted 72;B A
+Γ: Send to B : Voted 72;B Γ
+B: Announce Success Decree 1;E
+A: Announce NextBallot 73;A
+E: Send to A : LastVote 73;A (V (Vote {a'bal = 72;B, a'dec = Decree 1;E, a'pst = E}))
+B: Send to A : LastVote 73;A (V (Vote {a'bal = 72;B, a'dec = Decree 1;E, a'pst = B}))
+Γ: Send to A : LastVote 73;A (V (Vote {a'bal = 72;B, a'dec = Decree 1;E, a'pst = Γ}))
+∆: Send to A : LastVote 73;A (V (Vote {a'bal = 72;B, a'dec = Decree 1;E, a'pst = ∆}))
+A: Announce BeginBallot 73;A Decree 1;E
+Γ: Send to A : Voted 73;A Γ
+E: Send to A : Voted 73;A E
+∆: Send to A : Voted 73;A ∆
+B: Send to A : Voted 73;A B
+A: Announce Success Decree 1;E
+Γ: Announce NextBallot 74;Γ
+A: Send to Γ : LastVote 74;Γ (V (Vote {a'bal = 73;A, a'dec = Decree 1;E, a'pst = A}))
+B: Send to Γ : LastVote 74;Γ (V (Vote {a'bal = 73;A, a'dec = Decree 1;E, a'pst = B}))
+∆: Send to Γ : LastVote 74;Γ (V (Vote {a'bal = 73;A, a'dec = Decree 1;E, a'pst = ∆}))
+E: Send to Γ : LastVote 74;Γ (V (Vote {a'bal = 73;A, a'dec = Decree 1;E, a'pst = E}))
+Γ: Announce BeginBallot 74;Γ Decree 1;E
+A: Send to Γ : Voted 74;Γ A
+E: Send to Γ : Voted 74;Γ E
+∆: Send to Γ : Voted 74;Γ ∆
+B: Send to Γ : Voted 74;Γ B
+Γ: Announce Success Decree 1;E
+E: Announce NextBallot 75;E
+B: Send to E : LastVote 75;E (V (Vote {a'bal = 74;Γ, a'dec = Decree 1;E, a'pst = B}))
+Γ: Send to E : LastVote 75;E (V (Vote {a'bal = 74;Γ, a'dec = Decree 1;E, a'pst = Γ}))
+∆: Send to E : LastVote 75;E (V (Vote {a'bal = 74;Γ, a'dec = Decree 1;E, a'pst = ∆}))
+E: Announce BeginBallot 75;E Decree 1;E
+Γ: Send to E : Voted 75;E Γ
+B: Send to E : Voted 75;E B
+∆: Send to E : Voted 75;E ∆
+E: Announce Success Decree 1;E
+B: Announce NextBallot 76;B
+E: Send to B : LastVote 76;B (V (Vote {a'bal = 75;E, a'dec = Decree 1;E, a'pst = E}))
+Γ: Send to B : LastVote 76;B (V (Vote {a'bal = 75;E, a'dec = Decree 1;E, a'pst = Γ}))
+∆: Send to B : LastVote 76;B (V (Vote {a'bal = 75;E, a'dec = Decree 1;E, a'pst = ∆}))
+B: Announce BeginBallot 76;B Decree 1;E
+E: Send to B : Voted 76;B E
+∆: Send to B : Voted 76;B ∆
+Γ: Send to B : Voted 76;B Γ
+B: Announce Success Decree 1;E
+A: Announce NextBallot 75;A
+∆: Announce NextBallot 77;∆
+A: Send to ∆ : LastVote 77;∆ (V (Vote {a'bal = 74;Γ, a'dec = Decree 1;E, a'pst = A}))
+E: Send to ∆ : LastVote 77;∆ (V (Vote {a'bal = 76;B, a'dec = Decree 1;E, a'pst = E}))
+Γ: Announce NextBallot 77;Γ
+B: Send to Γ : LastVote 77;Γ (V (Vote {a'bal = 76;B, a'dec = Decree 1;E, a'pst = B}))
+B: Announce NextBallot 78;B
+Γ: Send to B : LastVote 78;B (V (Vote {a'bal = 76;B, a'dec = Decree 1;E, a'pst = Γ}))
+∆: Announce NextBallot 78;∆
+A: Send to ∆ : LastVote 78;∆ (V (Vote {a'bal = 74;Γ, a'dec = Decree 1;E, a'pst = A}))
+Γ: Send to ∆ : LastVote 78;∆ (V (Vote {a'bal = 76;B, a'dec = Decree 1;E, a'pst = Γ}))
+E: Send to ∆ : LastVote 78;∆ (V (Vote {a'bal = 76;B, a'dec = Decree 1;E, a'pst = E}))
+∆: Announce BeginBallot 78;∆ Decree 1;E
+A: Send to ∆ : Voted 78;∆ A
+Γ: Send to ∆ : Voted 78;∆ Γ
+E: Send to ∆ : Voted 78;∆ E
+∆: Announce Success Decree 1;E
+E: Announce NextBallot 79;E
+B: Send to E : LastVote 79;E (V (Vote {a'bal = 76;B, a'dec = Decree 1;E, a'pst = B}))
+Γ: Send to E : LastVote 79;E (V (Vote {a'bal = 78;∆, a'dec = Decree 1;E, a'pst = Γ}))
+A: Send to E : LastVote 79;E (V (Vote {a'bal = 78;∆, a'dec = Decree 1;E, a'pst = A}))
+∆: Send to E : LastVote 79;E (V (Vote {a'bal = 78;∆, a'dec = Decree 1;E, a'pst = ∆}))
+E: Announce BeginBallot 79;E Decree 1;E
+B: Send to E : Voted 79;E B
+A: Send to E : Voted 79;E A
+Γ: Send to E : Voted 79;E Γ
+E: Announce Success Decree 1;E
+∆: Send to E : Voted 79;E ∆
+E: Announce NextBallot 80;E
+Γ: Send to E : LastVote 80;E (V (Vote {a'bal = 79;E, a'dec = Decree 1;E, a'pst = Γ}))
+∆: Send to E : LastVote 80;E (V (Vote {a'bal = 79;E, a'dec = Decree 1;E, a'pst = ∆}))
+B: Send to E : LastVote 80;E (V (Vote {a'bal = 79;E, a'dec = Decree 1;E, a'pst = B}))
+A: Send to E : LastVote 80;E (V (Vote {a'bal = 79;E, a'dec = Decree 1;E, a'pst = A}))
+E: Announce BeginBallot 80;E Decree 1;E
+B: Send to E : Voted 80;E B
+A: Send to E : Voted 80;E A
+Γ: Send to E : Voted 80;E Γ
+∆: Send to E : Voted 80;E ∆
+E: Announce Success Decree 1;E
+A: Announce NextBallot 81;A
+Γ: Send to A : LastVote 81;A (V (Vote {a'bal = 80;E, a'dec = Decree 1;E, a'pst = Γ}))
+E: Send to A : LastVote 81;A (V (Vote {a'bal = 80;E, a'dec = Decree 1;E, a'pst = E}))
+E: Announce NextBallot 82;E
+Γ: Send to E : LastVote 82;E (V (Vote {a'bal = 80;E, a'dec = Decree 1;E, a'pst = Γ}))
+A: Send to E : LastVote 82;E (V (Vote {a'bal = 80;E, a'dec = Decree 1;E, a'pst = A}))
+A: Announce NextBallot 83;A
+Γ: Send to A : LastVote 83;A (V (Vote {a'bal = 80;E, a'dec = Decree 1;E, a'pst = Γ}))
+E: Send to A : LastVote 83;A (V (Vote {a'bal = 80;E, a'dec = Decree 1;E, a'pst = E}))
+∆: Announce NextBallot 81;∆
+Γ: Announce NextBallot 84;Γ
+E: Send to Γ : LastVote 84;Γ (V (Vote {a'bal = 80;E, a'dec = Decree 1;E, a'pst = E}))
+A: Send to Γ : LastVote 84;Γ (V (Vote {a'bal = 80;E, a'dec = Decree 1;E, a'pst = A}))
+∆: Send to Γ : LastVote 84;Γ (V (Vote {a'bal = 80;E, a'dec = Decree 1;E, a'pst = ∆}))
+Γ: Announce BeginBallot 84;Γ Decree 1;E
+A: Send to Γ : Voted 84;Γ A
+E: Send to Γ : Voted 84;Γ E
+∆: Send to Γ : Voted 84;Γ ∆
+Γ: Announce Success Decree 1;E
+A: Announce NextBallot 85;A
+Γ: Send to A : LastVote 85;A (V (Vote {a'bal = 84;Γ, a'dec = Decree 1;E, a'pst = Γ}))
+E: Send to A : LastVote 85;A (V (Vote {a'bal = 84;Γ, a'dec = Decree 1;E, a'pst = E}))
+∆: Send to A : LastVote 85;A (V (Vote {a'bal = 84;Γ, a'dec = Decree 1;E, a'pst = ∆}))
+A: Announce BeginBallot 85;A Decree 1;E
+Γ: Send to A : Voted 85;A Γ
+E: Send to A : Voted 85;A E
+∆: Send to A : Voted 85;A ∆
+A: Announce Success Decree 1;E
+E: Announce NextBallot 86;E
+∆: Send to E : LastVote 86;E (V (Vote {a'bal = 85;A, a'dec = Decree 1;E, a'pst = ∆}))
+A: Send to E : LastVote 86;E (V (Vote {a'bal = 85;A, a'dec = Decree 1;E, a'pst = A}))
+Γ: Send to E : LastVote 86;E (V (Vote {a'bal = 85;A, a'dec = Decree 1;E, a'pst = Γ}))
+E: Announce BeginBallot 86;E Decree 1;E
+Γ: Send to E : Voted 86;E Γ
+∆: Send to E : Voted 86;E ∆
+A: Send to E : Voted 86;E A
+E: Announce Success Decree 1;E
+E: Announce NextBallot 87;E
+A: Send to E : LastVote 87;E (V (Vote {a'bal = 86;E, a'dec = Decree 1;E, a'pst = A}))
+∆: Send to E : LastVote 87;E (V (Vote {a'bal = 86;E, a'dec = Decree 1;E, a'pst = ∆}))
+Γ: Send to E : LastVote 87;E (V (Vote {a'bal = 86;E, a'dec = Decree 1;E, a'pst = Γ}))
+E: Announce BeginBallot 87;E Decree 1;E
+A: Send to E : Voted 87;E A
+Γ: Send to E : Voted 87;E Γ
+∆: Send to E : Voted 87;E ∆
+E: Announce Success Decree 1;E
+Γ: Announce NextBallot 88;Γ
+∆: Send to Γ : LastVote 88;Γ (V (Vote {a'bal = 87;E, a'dec = Decree 1;E, a'pst = ∆}))
+E: Send to Γ : LastVote 88;Γ (V (Vote {a'bal = 87;E, a'dec = Decree 1;E, a'pst = E}))
+A: Send to Γ : LastVote 88;Γ (V (Vote {a'bal = 87;E, a'dec = Decree 1;E, a'pst = A}))
+Γ: Announce BeginBallot 88;Γ Decree 1;E
+E: Send to Γ : Voted 88;Γ E
+A: Send to Γ : Voted 88;Γ A
+∆: Send to Γ : Voted 88;Γ ∆
+Γ: Announce Success Decree 1;E
+E: Announce NextBallot 89;E
+A: Send to E : LastVote 89;E (V (Vote {a'bal = 88;Γ, a'dec = Decree 1;E, a'pst = A}))
+Γ: Send to E : LastVote 89;E (V (Vote {a'bal = 88;Γ, a'dec = Decree 1;E, a'pst = Γ}))
+A: Announce NextBallot 90;A
+E: Send to A : LastVote 90;A (V (Vote {a'bal = 88;Γ, a'dec = Decree 1;E, a'pst = E}))
+∆: Send to A : LastVote 90;A (V (Vote {a'bal = 88;Γ, a'dec = Decree 1;E, a'pst = ∆}))
+Γ: Send to A : LastVote 90;A (V (Vote {a'bal = 88;Γ, a'dec = Decree 1;E, a'pst = Γ}))
+A: Announce BeginBallot 90;A Decree 1;E
+E: Send to A : Voted 90;A E
+∆: Send to A : Voted 90;A ∆
+Γ: Send to A : Voted 90;A Γ
+A: Announce Success Decree 1;E
+Γ: Announce NextBallot 91;Γ
+∆: Send to Γ : LastVote 91;Γ (V (Vote {a'bal = 90;A, a'dec = Decree 1;E, a'pst = ∆}))
+A: Send to Γ : LastVote 91;Γ (V (Vote {a'bal = 90;A, a'dec = Decree 1;E, a'pst = A}))
+E: Send to Γ : LastVote 91;Γ (V (Vote {a'bal = 90;A, a'dec = Decree 1;E, a'pst = E}))
+Γ: Announce BeginBallot 91;Γ Decree 1;E
+∆: Send to Γ : Voted 91;Γ ∆
+E: Send to Γ : Voted 91;Γ E
+A: Send to Γ : Voted 91;Γ A
+Γ: Announce Success Decree 1;E
+B: Announce NextBallot 81;B
+Γ: Announce NextBallot 92;Γ
+A: Send to Γ : LastVote 92;Γ (V (Vote {a'bal = 91;Γ, a'dec = Decree 1;E, a'pst = A}))
+∆: Send to Γ : LastVote 92;Γ (V (Vote {a'bal = 91;Γ, a'dec = Decree 1;E, a'pst = ∆}))
+B: Send to Γ : LastVote 92;Γ (V (Vote {a'bal = 80;E, a'dec = Decree 1;E, a'pst = B}))
+Γ: Announce BeginBallot 92;Γ Decree 1;E
+A: Send to Γ : Voted 92;Γ A
+B: Send to Γ : Voted 92;Γ B
+∆: Send to Γ : Voted 92;Γ ∆
+Γ: Announce Success Decree 1;E
+E: Announce NextBallot 92;E
+∆: Announce NextBallot 93;∆
+A: Send to ∆ : LastVote 93;∆ (V (Vote {a'bal = 92;Γ, a'dec = Decree 1;E, a'pst = A}))
+E: Send to ∆ : LastVote 93;∆ (V (Vote {a'bal = 91;Γ, a'dec = Decree 1;E, a'pst = E}))
+A: Announce NextBallot 94;A
+∆: Send to A : LastVote 94;A (V (Vote {a'bal = 92;Γ, a'dec = Decree 1;E, a'pst = ∆}))
+E: Send to A : LastVote 94;A (V (Vote {a'bal = 91;Γ, a'dec = Decree 1;E, a'pst = E}))
+Γ: Announce NextBallot 93;Γ
+B: Announce NextBallot 93;B
+A: Announce NextBallot 95;A
+B: Send to A : LastVote 95;A (V (Vote {a'bal = 92;Γ, a'dec = Decree 1;E, a'pst = B}))
+Γ: Send to A : LastVote 95;A (V (Vote {a'bal = 92;Γ, a'dec = Decree 1;E, a'pst = Γ}))
+E: Send to A : LastVote 95;A (V (Vote {a'bal = 91;Γ, a'dec = Decree 1;E, a'pst = E}))
+A: Announce BeginBallot 95;A Decree 1;E
+B: Send to A : Voted 95;A B
+E: Send to A : Voted 95;A E
+Γ: Send to A : Voted 95;A Γ
+A: Announce Success Decree 1;E
+∆: Announce NextBallot 95;∆
+B: Send to ∆ : LastVote 95;∆ (V (Vote {a'bal = 95;A, a'dec = Decree 1;E, a'pst = B}))
+Γ: Send to ∆ : LastVote 95;∆ (V (Vote {a'bal = 95;A, a'dec = Decree 1;E, a'pst = Γ}))
+A: Send to ∆ : LastVote 95;∆ (V (Vote {a'bal = 95;A, a'dec = Decree 1;E, a'pst = A}))
+E: Send to ∆ : LastVote 95;∆ (V (Vote {a'bal = 95;A, a'dec = Decree 1;E, a'pst = E}))
+∆: Announce BeginBallot 95;∆ Decree 1;E
+E: Send to ∆ : Voted 95;∆ E
+B: Send to ∆ : Voted 95;∆ B
+A: Send to ∆ : Voted 95;∆ A
+Γ: Send to ∆ : Voted 95;∆ Γ
+∆: Announce Success Decree 1;E
+∆: Announce NextBallot 96;∆
+Γ: Send to ∆ : LastVote 96;∆ (V (Vote {a'bal = 95;∆, a'dec = Decree 1;E, a'pst = Γ}))
+E: Send to ∆ : LastVote 96;∆ (V (Vote {a'bal = 95;∆, a'dec = Decree 1;E, a'pst = E}))
+B: Send to ∆ : LastVote 96;∆ (V (Vote {a'bal = 95;∆, a'dec = Decree 1;E, a'pst = B}))
+A: Send to ∆ : LastVote 96;∆ (V (Vote {a'bal = 95;∆, a'dec = Decree 1;E, a'pst = A}))
+∆: Announce BeginBallot 96;∆ Decree 1;E
+B: Send to ∆ : Voted 96;∆ B
+Γ: Send to ∆ : Voted 96;∆ Γ
+A: Send to ∆ : Voted 96;∆ A
+E: Send to ∆ : Voted 96;∆ E
+∆: Announce Success Decree 1;E
+Γ: Announce NextBallot 97;Γ
+E: Send to Γ : LastVote 97;Γ (V (Vote {a'bal = 96;∆, a'dec = Decree 1;E, a'pst = E}))
+∆: Send to Γ : LastVote 97;Γ (V (Vote {a'bal = 96;∆, a'dec = Decree 1;E, a'pst = ∆}))
+B: Send to Γ : LastVote 97;Γ (V (Vote {a'bal = 96;∆, a'dec = Decree 1;E, a'pst = B}))
+A: Send to Γ : LastVote 97;Γ (V (Vote {a'bal = 96;∆, a'dec = Decree 1;E, a'pst = A}))
+Γ: Announce BeginBallot 97;Γ Decree 1;E
+E: Send to Γ : Voted 97;Γ E
+A: Send to Γ : Voted 97;Γ A
+∆: Send to Γ : Voted 97;Γ ∆
+B: Send to Γ : Voted 97;Γ B
+Γ: Announce Success Decree 1;E
+A: Announce NextBallot 98;A
+Γ: Send to A : LastVote 98;A (V (Vote {a'bal = 97;Γ, a'dec = Decree 1;E, a'pst = Γ}))
+E: Send to A : LastVote 98;A (V (Vote {a'bal = 97;Γ, a'dec = Decree 1;E, a'pst = E}))
+B: Send to A : LastVote 98;A (V (Vote {a'bal = 97;Γ, a'dec = Decree 1;E, a'pst = B}))
+A: Announce BeginBallot 98;A Decree 1;E
+Γ: Send to A : Voted 98;A Γ
+E: Send to A : Voted 98;A E
+B: Send to A : Voted 98;A B
+A: Announce Success Decree 1;E
+A: Announce NextBallot 99;A
+Γ: Send to A : LastVote 99;A (V (Vote {a'bal = 98;A, a'dec = Decree 1;E, a'pst = Γ}))
+E: Send to A : LastVote 99;A (V (Vote {a'bal = 98;A, a'dec = Decree 1;E, a'pst = E}))
+B: Send to A : LastVote 99;A (V (Vote {a'bal = 98;A, a'dec = Decree 1;E, a'pst = B}))
+A: Announce BeginBallot 99;A Decree 1;E
+B: Send to A : Voted 99;A B
+Γ: Send to A : Voted 99;A Γ
+E: Send to A : Voted 99;A E
+A: Announce Success Decree 1;E
+E: Announce NextBallot 100;E
+A: Send to E : LastVote 100;E (V (Vote {a'bal = 99;A, a'dec = Decree 1;E, a'pst = A}))
+B: Send to E : LastVote 100;E (V (Vote {a'bal = 99;A, a'dec = Decree 1;E, a'pst = B}))
+∆: Announce NextBallot 98;∆
+A: Announce NextBallot 101;A
+E: Send to A : LastVote 101;A (V (Vote {a'bal = 99;A, a'dec = Decree 1;E, a'pst = E}))
+E: Announce NextBallot 102;E
+A: Send to E : LastVote 102;E (V (Vote {a'bal = 99;A, a'dec = Decree 1;E, a'pst = A}))
+A: Announce NextBallot 103;A
+E: Send to A : LastVote 103;A (V (Vote {a'bal = 99;A, a'dec = Decree 1;E, a'pst = E}))
+∆: Send to A : LastVote 103;A (V (Vote {a'bal = 97;Γ, a'dec = Decree 1;E, a'pst = ∆}))
+B: Announce NextBallot 101;B
+∆: Announce NextBallot 104;∆
+Γ: Send to ∆ : LastVote 104;∆ (V (Vote {a'bal = 99;A, a'dec = Decree 1;E, a'pst = Γ}))
+Γ: Announce NextBallot 105;Γ
+∆: Send to Γ : LastVote 105;Γ (V (Vote {a'bal = 97;Γ, a'dec = Decree 1;E, a'pst = ∆}))
+Γ: Announce NextBallot 106;Γ
+E: Send to Γ : LastVote 106;Γ (V (Vote {a'bal = 99;A, a'dec = Decree 1;E, a'pst = E}))
+∆: Send to Γ : LastVote 106;Γ (V (Vote {a'bal = 97;Γ, a'dec = Decree 1;E, a'pst = ∆}))
+∆: Announce NextBallot 107;∆
+E: Send to ∆ : LastVote 107;∆ (V (Vote {a'bal = 99;A, a'dec = Decree 1;E, a'pst = E}))
+Γ: Send to ∆ : LastVote 107;∆ (V (Vote {a'bal = 99;A, a'dec = Decree 1;E, a'pst = Γ}))
+E: Announce NextBallot 108;E
+Γ: Send to E : LastVote 108;E (V (Vote {a'bal = 99;A, a'dec = Decree 1;E, a'pst = Γ}))
+B: Send to E : LastVote 108;E (V (Vote {a'bal = 99;A, a'dec = Decree 1;E, a'pst = B}))
+A: Send to E : LastVote 108;E (V (Vote {a'bal = 99;A, a'dec = Decree 1;E, a'pst = A}))
+E: Announce BeginBallot 108;E Decree 1;E
+B: Send to E : Voted 108;E B
+A: Send to E : Voted 108;E A
+Γ: Send to E : Voted 108;E Γ
+E: Announce Success Decree 1;E
+E: Announce NextBallot 109;E
+Γ: Send to E : LastVote 109;E (V (Vote {a'bal = 108;E, a'dec = Decree 1;E, a'pst = Γ}))
+A: Send to E : LastVote 109;E (V (Vote {a'bal = 108;E, a'dec = Decree 1;E, a'pst = A}))
+B: Send to E : LastVote 109;E (V (Vote {a'bal = 108;E, a'dec = Decree 1;E, a'pst = B}))
+E: Announce BeginBallot 109;E Decree 1;E
+B: Send to E : Voted 109;E B
+Γ: Send to E : Voted 109;E Γ
+A: Send to E : Voted 109;E A
+E: Announce Success Decree 1;E
+∆: Announce NextBallot 108;∆
+B: Announce NextBallot 110;B
+E: Send to B : LastVote 110;B (V (Vote {a'bal = 109;E, a'dec = Decree 1;E, a'pst = E}))
+∆: Send to B : LastVote 110;B (V (Vote {a'bal = 97;Γ, a'dec = Decree 1;E, a'pst = ∆}))
+A: Send to B : LastVote 110;B (V (Vote {a'bal = 109;E, a'dec = Decree 1;E, a'pst = A}))
+B: Announce BeginBallot 110;B Decree 1;E
+E: Send to B : Voted 110;B E
+∆: Send to B : Voted 110;B ∆
+A: Send to B : Voted 110;B A
+B: Announce Success Decree 1;E
+B: Announce NextBallot 111;B
+∆: Send to B : LastVote 111;B (V (Vote {a'bal = 110;B, a'dec = Decree 1;E, a'pst = ∆}))
+E: Send to B : LastVote 111;B (V (Vote {a'bal = 110;B, a'dec = Decree 1;E, a'pst = E}))
+∆: Announce NextBallot 112;∆
+E: Send to ∆ : LastVote 112;∆ (V (Vote {a'bal = 110;B, a'dec = Decree 1;E, a'pst = E}))
+E: Announce NextBallot 113;E
+A: Send to E : LastVote 113;E (V (Vote {a'bal = 110;B, a'dec = Decree 1;E, a'pst = A}))
+∆: Send to E : LastVote 113;E (V (Vote {a'bal = 110;B, a'dec = Decree 1;E, a'pst = ∆}))
+A: Announce NextBallot 114;A
+E: Send to A : LastVote 114;A (V (Vote {a'bal = 110;B, a'dec = Decree 1;E, a'pst = E}))
+∆: Send to A : LastVote 114;A (V (Vote {a'bal = 110;B, a'dec = Decree 1;E, a'pst = ∆}))
+Γ: Announce NextBallot 110;Γ
+Γ: Announce NextBallot 111;Γ
+∆: Announce NextBallot 115;∆
+A: Announce NextBallot 115;A
+E: Announce NextBallot 115;E
+A: Send to E : LastVote 115;E (V (Vote {a'bal = 110;B, a'dec = Decree 1;E, a'pst = A}))
+Γ: Announce NextBallot 112;Γ
+B: Announce NextBallot 112;B
+Γ: Announce NextBallot 113;Γ
+B: Send to Γ : LastVote 113;Γ (V (Vote {a'bal = 110;B, a'dec = Decree 1;E, a'pst = B}))
+∆: Announce NextBallot 116;∆
+B: Send to ∆ : LastVote 116;∆ (V (Vote {a'bal = 110;B, a'dec = Decree 1;E, a'pst = B}))
+Γ: Send to ∆ : LastVote 116;∆ (V (Vote {a'bal = 109;E, a'dec = Decree 1;E, a'pst = Γ}))
+E: Send to ∆ : LastVote 116;∆ (V (Vote {a'bal = 110;B, a'dec = Decree 1;E, a'pst = E}))
+∆: Announce BeginBallot 116;∆ Decree 1;E
+B: Send to ∆ : Voted 116;∆ B
+Γ: Send to ∆ : Voted 116;∆ Γ
+E: Send to ∆ : Voted 116;∆ E
+∆: Announce Success Decree 1;E
+B: Announce NextBallot 117;B
+Γ: Send to B : LastVote 117;B (V (Vote {a'bal = 116;∆, a'dec = Decree 1;E, a'pst = Γ}))
+E: Send to B : LastVote 117;B (V (Vote {a'bal = 116;∆, a'dec = Decree 1;E, a'pst = E}))
+∆: Send to B : LastVote 117;B (V (Vote {a'bal = 116;∆, a'dec = Decree 1;E, a'pst = ∆}))
+B: Announce BeginBallot 117;B Decree 1;E
+∆: Send to B : Voted 117;B ∆
+Γ: Send to B : Voted 117;B Γ
+E: Send to B : Voted 117;B E
+B: Announce Success Decree 1;E
+Γ: Announce NextBallot 118;Γ
+∆: Send to Γ : LastVote 118;Γ (V (Vote {a'bal = 117;B, a'dec = Decree 1;E, a'pst = ∆}))
+B: Send to Γ : LastVote 118;Γ (V (Vote {a'bal = 117;B, a'dec = Decree 1;E, a'pst = B}))
+A: Send to Γ : LastVote 118;Γ (V (Vote {a'bal = 110;B, a'dec = Decree 1;E, a'pst = A}))
+Γ: Announce BeginBallot 118;Γ Decree 1;E
+∆: Send to Γ : Voted 118;Γ ∆
+A: Send to Γ : Voted 118;Γ A
+B: Send to Γ : Voted 118;Γ B
+Γ: Announce Success Decree 1;E
+B: Announce NextBallot 119;B
+Γ: Send to B : LastVote 119;B (V (Vote {a'bal = 118;Γ, a'dec = Decree 1;E, a'pst = Γ}))
+A: Send to B : LastVote 119;B (V (Vote {a'bal = 118;Γ, a'dec = Decree 1;E, a'pst = A}))
+E: Announce NextBallot 118;E
+Γ: Announce NextBallot 120;Γ
+B: Send to Γ : LastVote 120;Γ (V (Vote {a'bal = 118;Γ, a'dec = Decree 1;E, a'pst = B}))
+E: Send to Γ : LastVote 120;Γ (V (Vote {a'bal = 117;B, a'dec = Decree 1;E, a'pst = E}))
+A: Send to Γ : LastVote 120;Γ (V (Vote {a'bal = 118;Γ, a'dec = Decree 1;E, a'pst = A}))
+Γ: Announce BeginBallot 120;Γ Decree 1;E
+B: Send to Γ : Voted 120;Γ B
+E: Send to Γ : Voted 120;Γ E
+A: Send to Γ : Voted 120;Γ A
+Γ: Announce Success Decree 1;E
+Γ: Announce NextBallot 121;Γ
+A: Send to Γ : LastVote 121;Γ (V (Vote {a'bal = 120;Γ, a'dec = Decree 1;E, a'pst = A}))
+E: Send to Γ : LastVote 121;Γ (V (Vote {a'bal = 120;Γ, a'dec = Decree 1;E, a'pst = E}))
+∆: Announce NextBallot 119;∆
+Γ: Announce NextBallot 122;Γ
+B: Send to Γ : LastVote 122;Γ (V (Vote {a'bal = 120;Γ, a'dec = Decree 1;E, a'pst = B}))
+∆: Send to Γ : LastVote 122;Γ (V (Vote {a'bal = 118;Γ, a'dec = Decree 1;E, a'pst = ∆}))
+A: Send to Γ : LastVote 122;Γ (V (Vote {a'bal = 120;Γ, a'dec = Decree 1;E, a'pst = A}))
+Γ: Announce BeginBallot 122;Γ Decree 1;E
+B: Send to Γ : Voted 122;Γ B
+∆: Send to Γ : Voted 122;Γ ∆
+A: Send to Γ : Voted 122;Γ A
+Γ: Announce Success Decree 1;E
+A: Announce NextBallot 123;A
+B: Send to A : LastVote 123;A (V (Vote {a'bal = 122;Γ, a'dec = Decree 1;E, a'pst = B}))
+Γ: Send to A : LastVote 123;A (V (Vote {a'bal = 122;Γ, a'dec = Decree 1;E, a'pst = Γ}))
+∆: Send to A : LastVote 123;A (V (Vote {a'bal = 122;Γ, a'dec = Decree 1;E, a'pst = ∆}))
+A: Announce BeginBallot 123;A Decree 1;E
+∆: Send to A : Voted 123;A ∆
+Γ: Send to A : Voted 123;A Γ
+B: Send to A : Voted 123;A B
+A: Announce Success Decree 1;E
+Γ: Announce NextBallot 124;Γ
+B: Send to Γ : LastVote 124;Γ (V (Vote {a'bal = 123;A, a'dec = Decree 1;E, a'pst = B}))
+A: Send to Γ : LastVote 124;Γ (V (Vote {a'bal = 123;A, a'dec = Decree 1;E, a'pst = A}))
+Γ: Announce NextBallot 125;Γ
+B: Send to Γ : LastVote 125;Γ (V (Vote {a'bal = 123;A, a'dec = Decree 1;E, a'pst = B}))
+A: Send to Γ : LastVote 125;Γ (V (Vote {a'bal = 123;A, a'dec = Decree 1;E, a'pst = A}))
+A: Announce NextBallot 126;A
+B: Send to A : LastVote 126;A (V (Vote {a'bal = 123;A, a'dec = Decree 1;E, a'pst = B}))
+Γ: Send to A : LastVote 126;A (V (Vote {a'bal = 123;A, a'dec = Decree 1;E, a'pst = Γ}))
+B: Announce NextBallot 127;B
+∆: Send to B : LastVote 127;B (V (Vote {a'bal = 123;A, a'dec = Decree 1;E, a'pst = ∆}))
+A: Send to B : LastVote 127;B (V (Vote {a'bal = 123;A, a'dec = Decree 1;E, a'pst = A}))
+∆: Announce NextBallot 128;∆
+A: Send to ∆ : LastVote 128;∆ (V (Vote {a'bal = 123;A, a'dec = Decree 1;E, a'pst = A}))
+B: Send to ∆ : LastVote 128;∆ (V (Vote {a'bal = 123;A, a'dec = Decree 1;E, a'pst = B}))
+E: Send to ∆ : LastVote 128;∆ (V (Vote {a'bal = 120;Γ, a'dec = Decree 1;E, a'pst = E}))
+∆: Announce BeginBallot 128;∆ Decree 1;E
+A: Send to ∆ : Voted 128;∆ A
+E: Send to ∆ : Voted 128;∆ E
+B: Send to ∆ : Voted 128;∆ B
+∆: Announce Success Decree 1;E
+∆: Announce NextBallot 129;∆
+E: Send to ∆ : LastVote 129;∆ (V (Vote {a'bal = 128;∆, a'dec = Decree 1;E, a'pst = E}))
+B: Send to ∆ : LastVote 129;∆ (V (Vote {a'bal = 128;∆, a'dec = Decree 1;E, a'pst = B}))
+Γ: Announce NextBallot 127;Γ
+A: Announce NextBallot 129;A
+Γ: Send to A : LastVote 129;A (V (Vote {a'bal = 123;A, a'dec = Decree 1;E, a'pst = Γ}))
+E: Announce NextBallot 130;E
+A: Send to E : LastVote 130;E (V (Vote {a'bal = 128;∆, a'dec = Decree 1;E, a'pst = A}))
+B: Send to E : LastVote 130;E (V (Vote {a'bal = 128;∆, a'dec = Decree 1;E, a'pst = B}))
+Γ: Send to E : LastVote 130;E (V (Vote {a'bal = 123;A, a'dec = Decree 1;E, a'pst = Γ}))
+∆: Send to E : LastVote 130;E (V (Vote {a'bal = 128;∆, a'dec = Decree 1;E, a'pst = ∆}))
+E: Announce BeginBallot 130;E Decree 1;E
+A: Send to E : Voted 130;E A
+∆: Send to E : Voted 130;E ∆
+Γ: Send to E : Voted 130;E Γ
+B: Send to E : Voted 130;E B
+E: Announce Success Decree 1;E
+B: Announce NextBallot 131;B
+Γ: Send to B : LastVote 131;B (V (Vote {a'bal = 130;E, a'dec = Decree 1;E, a'pst = Γ}))
+∆: Send to B : LastVote 131;B (V (Vote {a'bal = 130;E, a'dec = Decree 1;E, a'pst = ∆}))
+A: Send to B : LastVote 131;B (V (Vote {a'bal = 130;E, a'dec = Decree 1;E, a'pst = A}))
+E: Send to B : LastVote 131;B (V (Vote {a'bal = 130;E, a'dec = Decree 1;E, a'pst = E}))
+B: Announce BeginBallot 131;B Decree 1;E
+A: Send to B : Voted 131;B A
+Γ: Send to B : Voted 131;B Γ
+∆: Send to B : Voted 131;B ∆
+E: Send to B : Voted 131;B E
+B: Announce Success Decree 1;E
+A: Announce NextBallot 132;A
+∆: Send to A : LastVote 132;A (V (Vote {a'bal = 131;B, a'dec = Decree 1;E, a'pst = ∆}))
+E: Send to A : LastVote 132;A (V (Vote {a'bal = 131;B, a'dec = Decree 1;E, a'pst = E}))
+Γ: Send to A : LastVote 132;A (V (Vote {a'bal = 131;B, a'dec = Decree 1;E, a'pst = Γ}))
+B: Send to A : LastVote 132;A (V (Vote {a'bal = 131;B, a'dec = Decree 1;E, a'pst = B}))
+A: Announce BeginBallot 132;A Decree 1;E
+Γ: Send to A : Voted 132;A Γ
+∆: Send to A : Voted 132;A ∆
+E: Send to A : Voted 132;A E
+B: Send to A : Voted 132;A B
+A: Announce Success Decree 1;E
+B: Announce NextBallot 133;B
+E: Send to B : LastVote 133;B (V (Vote {a'bal = 132;A, a'dec = Decree 1;E, a'pst = E}))
+∆: Send to B : LastVote 133;B (V (Vote {a'bal = 132;A, a'dec = Decree 1;E, a'pst = ∆}))
+A: Send to B : LastVote 133;B (V (Vote {a'bal = 132;A, a'dec = Decree 1;E, a'pst = A}))
+Γ: Send to B : LastVote 133;B (V (Vote {a'bal = 132;A, a'dec = Decree 1;E, a'pst = Γ}))
+B: Announce BeginBallot 133;B Decree 1;E
+A: Send to B : Voted 133;B A
+∆: Send to B : Voted 133;B ∆
+E: Send to B : Voted 133;B E
+B: Announce Success Decree 1;E
+Γ: Send to B : Voted 133;B Γ
+Γ: Announce NextBallot 134;Γ
+A: Send to Γ : LastVote 134;Γ (V (Vote {a'bal = 133;B, a'dec = Decree 1;E, a'pst = A}))
+B: Send to Γ : LastVote 134;Γ (V (Vote {a'bal = 133;B, a'dec = Decree 1;E, a'pst = B}))
+∆: Send to Γ : LastVote 134;Γ (V (Vote {a'bal = 133;B, a'dec = Decree 1;E, a'pst = ∆}))
+Γ: Announce BeginBallot 134;Γ Decree 1;E
+B: Send to Γ : Voted 134;Γ B
+A: Send to Γ : Voted 134;Γ A
+∆: Send to Γ : Voted 134;Γ ∆
+Γ: Announce Success Decree 1;E
+A: Announce NextBallot 135;A
+E: Send to A : LastVote 135;A (V (Vote {a'bal = 133;B, a'dec = Decree 1;E, a'pst = E}))
+Γ: Send to A : LastVote 135;A (V (Vote {a'bal = 134;Γ, a'dec = Decree 1;E, a'pst = Γ}))
+∆: Send to A : LastVote 135;A (V (Vote {a'bal = 134;Γ, a'dec = Decree 1;E, a'pst = ∆}))
+A: Announce BeginBallot 135;A Decree 1;E
+B: Send to A : LastVote 135;A (V (Vote {a'bal = 134;Γ, a'dec = Decree 1;E, a'pst = B}))
+Γ: Send to A : Voted 135;A Γ
+E: Send to A : Voted 135;A E
+∆: Send to A : Voted 135;A ∆
+B: Send to A : Voted 135;A B
+A: Announce Success Decree 1;E
+A: Announce NextBallot 136;A
+E: Send to A : LastVote 136;A (V (Vote {a'bal = 135;A, a'dec = Decree 1;E, a'pst = E}))
+Γ: Send to A : LastVote 136;A (V (Vote {a'bal = 135;A, a'dec = Decree 1;E, a'pst = Γ}))
+∆: Send to A : LastVote 136;A (V (Vote {a'bal = 135;A, a'dec = Decree 1;E, a'pst = ∆}))
+B: Send to A : LastVote 136;A (V (Vote {a'bal = 135;A, a'dec = Decree 1;E, a'pst = B}))
+A: Announce BeginBallot 136;A Decree 1;E
+B: Send to A : Voted 136;A B
+E: Send to A : Voted 136;A E
+∆: Send to A : Voted 136;A ∆
+Γ: Send to A : Voted 136;A Γ
+A: Announce Success Decree 1;E
+B: Announce NextBallot 137;B
+E: Send to B : LastVote 137;B (V (Vote {a'bal = 136;A, a'dec = Decree 1;E, a'pst = E}))
+∆: Send to B : LastVote 137;B (V (Vote {a'bal = 136;A, a'dec = Decree 1;E, a'pst = ∆}))
+Γ: Send to B : LastVote 137;B (V (Vote {a'bal = 136;A, a'dec = Decree 1;E, a'pst = Γ}))
+A: Send to B : LastVote 137;B (V (Vote {a'bal = 136;A, a'dec = Decree 1;E, a'pst = A}))
+B: Announce BeginBallot 137;B Decree 1;E
+A: Send to B : Voted 137;B A
+E: Send to B : Voted 137;B E
+Γ: Send to B : Voted 137;B Γ
+∆: Send to B : Voted 137;B ∆
+B: Announce Success Decree 1;E
+B: Announce NextBallot 138;B
+A: Send to B : LastVote 138;B (V (Vote {a'bal = 137;B, a'dec = Decree 1;E, a'pst = A}))
+E: Send to B : LastVote 138;B (V (Vote {a'bal = 137;B, a'dec = Decree 1;E, a'pst = E}))
+Γ: Send to B : LastVote 138;B (V (Vote {a'bal = 137;B, a'dec = Decree 1;E, a'pst = Γ}))
+∆: Send to B : LastVote 138;B (V (Vote {a'bal = 137;B, a'dec = Decree 1;E, a'pst = ∆}))
+B: Announce BeginBallot 138;B Decree 1;E
+Γ: Send to B : Voted 138;B Γ
+E: Send to B : Voted 138;B E
+∆: Send to B : Voted 138;B ∆
+A: Send to B : Voted 138;B A
+B: Announce Success Decree 1;E
+A: Announce NextBallot 139;A
+B: Send to A : LastVote 139;A (V (Vote {a'bal = 138;B, a'dec = Decree 1;E, a'pst = B}))
+∆: Send to A : LastVote 139;A (V (Vote {a'bal = 138;B, a'dec = Decree 1;E, a'pst = ∆}))
+Γ: Send to A : LastVote 139;A (V (Vote {a'bal = 138;B, a'dec = Decree 1;E, a'pst = Γ}))
+E: Send to A : LastVote 139;A (V (Vote {a'bal = 138;B, a'dec = Decree 1;E, a'pst = E}))
+A: Announce BeginBallot 139;A Decree 1;E
+B: Send to A : Voted 139;A B
+E: Send to A : Voted 139;A E
+∆: Send to A : Voted 139;A ∆
+Γ: Send to A : Voted 139;A Γ
+A: Announce Success Decree 1;E
+B: Announce NextBallot 140;B
+A: Send to B : LastVote 140;B (V (Vote {a'bal = 139;A, a'dec = Decree 1;E, a'pst = A}))
+∆: Send to B : LastVote 140;B (V (Vote {a'bal = 139;A, a'dec = Decree 1;E, a'pst = ∆}))
+E: Send to B : LastVote 140;B (V (Vote {a'bal = 139;A, a'dec = Decree 1;E, a'pst = E}))
+B: Announce BeginBallot 140;B Decree 1;E
+A: Send to B : Voted 140;B A
+E: Send to B : Voted 140;B E
+∆: Send to B : Voted 140;B ∆
+B: Announce Success Decree 1;E
+A: Announce NextBallot 141;A
+B: Send to A : LastVote 141;A (V (Vote {a'bal = 140;B, a'dec = Decree 1;E, a'pst = B}))
+∆: Send to A : LastVote 141;A (V (Vote {a'bal = 140;B, a'dec = Decree 1;E, a'pst = ∆}))
+E: Send to A : LastVote 141;A (V (Vote {a'bal = 140;B, a'dec = Decree 1;E, a'pst = E}))
+A: Announce BeginBallot 141;A Decree 1;E
+B: Send to A : Voted 141;A B
+E: Send to A : Voted 141;A E
+∆: Send to A : Voted 141;A ∆
+A: Announce Success Decree 1;E
+B: Announce NextBallot 142;B
+A: Send to B : LastVote 142;B (V (Vote {a'bal = 141;A, a'dec = Decree 1;E, a'pst = A}))
+∆: Send to B : LastVote 142;B (V (Vote {a'bal = 141;A, a'dec = Decree 1;E, a'pst = ∆}))
+E: Send to B : LastVote 142;B (V (Vote {a'bal = 141;A, a'dec = Decree 1;E, a'pst = E}))
+B: Announce BeginBallot 142;B Decree 1;E
+A: Send to B : Voted 142;B A
+E: Send to B : Voted 142;B E
+∆: Send to B : Voted 142;B ∆
+B: Announce Success Decree 1;E
+∆: Announce NextBallot 143;∆
+E: Send to ∆ : LastVote 143;∆ (V (Vote {a'bal = 142;B, a'dec = Decree 1;E, a'pst = E}))
+A: Send to ∆ : LastVote 143;∆ (V (Vote {a'bal = 142;B, a'dec = Decree 1;E, a'pst = A}))
+B: Send to ∆ : LastVote 143;∆ (V (Vote {a'bal = 142;B, a'dec = Decree 1;E, a'pst = B}))
+Γ: Send to ∆ : LastVote 143;∆ (V (Vote {a'bal = 139;A, a'dec = Decree 1;E, a'pst = Γ}))
+∆: Announce BeginBallot 143;∆ Decree 1;E
+A: Send to ∆ : Voted 143;∆ A
+Γ: Send to ∆ : Voted 143;∆ Γ
+B: Send to ∆ : Voted 143;∆ B
+E: Send to ∆ : Voted 143;∆ E
+∆: Announce Success Decree 1;E
+A: Announce NextBallot 144;A
+E: Send to A : LastVote 144;A (V (Vote {a'bal = 143;∆, a'dec = Decree 1;E, a'pst = E}))
+B: Send to A : LastVote 144;A (V (Vote {a'bal = 143;∆, a'dec = Decree 1;E, a'pst = B}))
+∆: Send to A : LastVote 144;A (V (Vote {a'bal = 143;∆, a'dec = Decree 1;E, a'pst = ∆}))
+A: Announce BeginBallot 144;A Decree 1;E
+Γ: Send to A : LastVote 144;A (V (Vote {a'bal = 143;∆, a'dec = Decree 1;E, a'pst = Γ}))
+B: Send to A : Voted 144;A B
+∆: Send to A : Voted 144;A ∆
+Γ: Send to A : Voted 144;A Γ
+E: Send to A : Voted 144;A E
+A: Announce Success Decree 1;E
+E: Announce NextBallot 145;E
+Γ: Send to E : LastVote 145;E (V (Vote {a'bal = 144;A, a'dec = Decree 1;E, a'pst = Γ}))
+B: Send to E : LastVote 145;E (V (Vote {a'bal = 144;A, a'dec = Decree 1;E, a'pst = B}))
+A: Send to E : LastVote 145;E (V (Vote {a'bal = 144;A, a'dec = Decree 1;E, a'pst = A}))
+∆: Send to E : LastVote 145;E (V (Vote {a'bal = 144;A, a'dec = Decree 1;E, a'pst = ∆}))
+E: Announce BeginBallot 145;E Decree 1;E
+∆: Send to E : Voted 145;E ∆
+Γ: Send to E : Voted 145;E Γ
+B: Send to E : Voted 145;E B
+A: Send to E : Voted 145;E A
+E: Announce Success Decree 1;E
+A: Announce NextBallot 146;A
+B: Send to A : LastVote 146;A (V (Vote {a'bal = 145;E, a'dec = Decree 1;E, a'pst = B}))
+∆: Announce NextBallot 146;∆
+A: Send to ∆ : LastVote 146;∆ (V (Vote {a'bal = 145;E, a'dec = Decree 1;E, a'pst = A}))
+B: Announce NextBallot 147;B
+A: Send to B : LastVote 147;B (V (Vote {a'bal = 145;E, a'dec = Decree 1;E, a'pst = A}))
+∆: Send to B : LastVote 147;B (V (Vote {a'bal = 145;E, a'dec = Decree 1;E, a'pst = ∆}))
+∆: Announce NextBallot 148;∆
+B: Send to ∆ : LastVote 148;∆ (V (Vote {a'bal = 145;E, a'dec = Decree 1;E, a'pst = B}))
+B: Announce NextBallot 149;B
+Γ: Send to B : LastVote 149;B (V (Vote {a'bal = 145;E, a'dec = Decree 1;E, a'pst = Γ}))
+E: Send to B : LastVote 149;B (V (Vote {a'bal = 145;E, a'dec = Decree 1;E, a'pst = E}))
+Γ: Announce NextBallot 150;Γ
+E: Send to Γ : LastVote 150;Γ (V (Vote {a'bal = 145;E, a'dec = Decree 1;E, a'pst = E}))
+B: Send to Γ : LastVote 150;Γ (V (Vote {a'bal = 145;E, a'dec = Decree 1;E, a'pst = B}))
+∆: Announce NextBallot 149;∆
+∆: Announce NextBallot 150;∆
+B: Send to ∆ : LastVote 150;∆ (V (Vote {a'bal = 145;E, a'dec = Decree 1;E, a'pst = B}))
+Γ: Send to ∆ : LastVote 150;∆ (V (Vote {a'bal = 145;E, a'dec = Decree 1;E, a'pst = Γ}))
+E: Send to ∆ : LastVote 150;∆ (V (Vote {a'bal = 145;E, a'dec = Decree 1;E, a'pst = E}))
+∆: Announce BeginBallot 150;∆ Decree 1;E
+B: Send to ∆ : Voted 150;∆ B
+Γ: Send to ∆ : Voted 150;∆ Γ
+E: Send to ∆ : Voted 150;∆ E
+∆: Announce Success Decree 1;E
+B: Announce NextBallot 151;B
+Γ: Send to B : LastVote 151;B (V (Vote {a'bal = 150;∆, a'dec = Decree 1;E, a'pst = Γ}))
+∆: Send to B : LastVote 151;B (V (Vote {a'bal = 150;∆, a'dec = Decree 1;E, a'pst = ∆}))
+E: Send to B : LastVote 151;B (V (Vote {a'bal = 150;∆, a'dec = Decree 1;E, a'pst = E}))
+A: Send to B : LastVote 151;B (V (Vote {a'bal = 145;E, a'dec = Decree 1;E, a'pst = A}))
+B: Announce BeginBallot 151;B Decree 1;E
+Γ: Send to B : Voted 151;B Γ
+∆: Send to B : Voted 151;B ∆
+E: Send to B : Voted 151;B E
+A: Send to B : Voted 151;B A
+B: Announce Success Decree 1;E
+B: Announce NextBallot 152;B
+Γ: Send to B : LastVote 152;B (V (Vote {a'bal = 151;B, a'dec = Decree 1;E, a'pst = Γ}))
+E: Send to B : LastVote 152;B (V (Vote {a'bal = 151;B, a'dec = Decree 1;E, a'pst = E}))
+A: Send to B : LastVote 152;B (V (Vote {a'bal = 151;B, a'dec = Decree 1;E, a'pst = A}))
+B: Announce BeginBallot 152;B Decree 1;E
+E: Send to B : Voted 152;B E
+A: Send to B : Voted 152;B A
+Γ: Send to B : Voted 152;B Γ
+B: Announce Success Decree 1;E
+∆: Announce NextBallot 152;∆
+Γ: Send to ∆ : LastVote 152;∆ (V (Vote {a'bal = 152;B, a'dec = Decree 1;E, a'pst = Γ}))
+B: Send to ∆ : LastVote 152;∆ (V (Vote {a'bal = 152;B, a'dec = Decree 1;E, a'pst = B}))
+E: Send to ∆ : LastVote 152;∆ (V (Vote {a'bal = 152;B, a'dec = Decree 1;E, a'pst = E}))
+A: Send to ∆ : LastVote 152;∆ (V (Vote {a'bal = 152;B, a'dec = Decree 1;E, a'pst = A}))
+∆: Announce BeginBallot 152;∆ Decree 1;E
+B: Send to ∆ : Voted 152;∆ B
+Γ: Send to ∆ : Voted 152;∆ Γ
+E: Send to ∆ : Voted 152;∆ E
+A: Send to ∆ : Voted 152;∆ A
+∆: Announce Success Decree 1;E
+A: Announce NextBallot 153;A
+B: Send to A : LastVote 153;A (V (Vote {a'bal = 152;∆, a'dec = Decree 1;E, a'pst = B}))
+Γ: Send to A : LastVote 153;A (V (Vote {a'bal = 152;∆, a'dec = Decree 1;E, a'pst = Γ}))
+B: Announce NextBallot 154;B
+Γ: Send to B : LastVote 154;B (V (Vote {a'bal = 152;∆, a'dec = Decree 1;E, a'pst = Γ}))
+A: Send to B : LastVote 154;B (V (Vote {a'bal = 152;∆, a'dec = Decree 1;E, a'pst = A}))
+E: Announce NextBallot 153;E
+∆: Announce NextBallot 153;∆
+E: Send to ∆ : LastVote 153;∆ (V (Vote {a'bal = 152;∆, a'dec = Decree 1;E, a'pst = E}))
+Γ: Announce NextBallot 155;Γ
+E: Send to Γ : LastVote 155;Γ (V (Vote {a'bal = 152;∆, a'dec = Decree 1;E, a'pst = E}))
+B: Send to Γ : LastVote 155;Γ (V (Vote {a'bal = 152;∆, a'dec = Decree 1;E, a'pst = B}))
+A: Send to Γ : LastVote 155;Γ (V (Vote {a'bal = 152;∆, a'dec = Decree 1;E, a'pst = A}))
+Γ: Announce BeginBallot 155;Γ Decree 1;E
+A: Send to Γ : Voted 155;Γ A
+E: Send to Γ : Voted 155;Γ E
+B: Send to Γ : Voted 155;Γ B
+Γ: Announce Success Decree 1;E
+Γ: Announce NextBallot 156;Γ
+E: Send to Γ : LastVote 156;Γ (V (Vote {a'bal = 155;Γ, a'dec = Decree 1;E, a'pst = E}))
+∆: Send to Γ : LastVote 156;Γ (V (Vote {a'bal = 152;∆, a'dec = Decree 1;E, a'pst = ∆}))
+A: Announce NextBallot 156;A
+∆: Announce NextBallot 157;∆
+A: Send to ∆ : LastVote 157;∆ (V (Vote {a'bal = 155;Γ, a'dec = Decree 1;E, a'pst = A}))
+Γ: Send to ∆ : LastVote 157;∆ (V (Vote {a'bal = 155;Γ, a'dec = Decree 1;E, a'pst = Γ}))
+B: Send to ∆ : LastVote 157;∆ (V (Vote {a'bal = 155;Γ, a'dec = Decree 1;E, a'pst = B}))
+∆: Announce BeginBallot 157;∆ Decree 1;E
+A: Send to ∆ : Voted 157;∆ A
+B: Send to ∆ : Voted 157;∆ B
+Γ: Send to ∆ : Voted 157;∆ Γ
+∆: Announce Success Decree 1;E
+E: Announce NextBallot 157;E
+A: Announce NextBallot 158;A
+E: Send to A : LastVote 158;A (V (Vote {a'bal = 155;Γ, a'dec = Decree 1;E, a'pst = E}))
+∆: Send to A : LastVote 158;A (V (Vote {a'bal = 157;∆, a'dec = Decree 1;E, a'pst = ∆}))
+E: Announce NextBallot 159;E
+B: Send to E : LastVote 159;E (V (Vote {a'bal = 157;∆, a'dec = Decree 1;E, a'pst = B}))
+B: Announce NextBallot 160;B
+E: Send to B : LastVote 160;B (V (Vote {a'bal = 155;Γ, a'dec = Decree 1;E, a'pst = E}))
+E: Announce NextBallot 161;E
+A: Send to E : LastVote 161;E (V (Vote {a'bal = 157;∆, a'dec = Decree 1;E, a'pst = A}))
+Γ: Send to E : LastVote 161;E (V (Vote {a'bal = 157;∆, a'dec = Decree 1;E, a'pst = Γ}))
+A: Announce NextBallot 162;A
+E: Send to A : LastVote 162;A (V (Vote {a'bal = 155;Γ, a'dec = Decree 1;E, a'pst = E}))
+Γ: Send to A : LastVote 162;A (V (Vote {a'bal = 157;∆, a'dec = Decree 1;E, a'pst = Γ}))
+Γ: Announce NextBallot 163;Γ
+A: Send to Γ : LastVote 163;Γ (V (Vote {a'bal = 157;∆, a'dec = Decree 1;E, a'pst = A}))
+E: Send to Γ : LastVote 163;Γ (V (Vote {a'bal = 155;Γ, a'dec = Decree 1;E, a'pst = E}))
+B: Announce NextBallot 161;B
+∆: Send to B : LastVote 161;B (V (Vote {a'bal = 157;∆, a'dec = Decree 1;E, a'pst = ∆}))
+∆: Announce NextBallot 162;∆
+B: Send to ∆ : LastVote 162;∆ (V (Vote {a'bal = 157;∆, a'dec = Decree 1;E, a'pst = B}))
+A: Announce NextBallot 164;A
+B: Send to A : LastVote 164;A (V (Vote {a'bal = 157;∆, a'dec = Decree 1;E, a'pst = B}))
+∆: Send to A : LastVote 164;A (V (Vote {a'bal = 157;∆, a'dec = Decree 1;E, a'pst = ∆}))
+B: Announce NextBallot 165;B
+A: Send to B : LastVote 165;B (V (Vote {a'bal = 157;∆, a'dec = Decree 1;E, a'pst = A}))
+Γ: Send to B : LastVote 165;B (V (Vote {a'bal = 157;∆, a'dec = Decree 1;E, a'pst = Γ}))
+∆: Send to B : LastVote 165;B (V (Vote {a'bal = 157;∆, a'dec = Decree 1;E, a'pst = ∆}))
+B: Announce BeginBallot 165;B Decree 1;E
+Γ: Send to B : Voted 165;B Γ
+A: Send to B : Voted 165;B A
+∆: Send to B : Voted 165;B ∆
+B: Announce Success Decree 1;E
+E: Announce NextBallot 164;E
+B: Announce NextBallot 166;B
+A: Send to B : LastVote 166;B (V (Vote {a'bal = 165;B, a'dec = Decree 1;E, a'pst = A}))
+∆: Send to B : LastVote 166;B (V (Vote {a'bal = 165;B, a'dec = Decree 1;E, a'pst = ∆}))
+E: Send to B : LastVote 166;B (V (Vote {a'bal = 155;Γ, a'dec = Decree 1;E, a'pst = E}))
+B: Announce BeginBallot 166;B Decree 1;E
+∆: Send to B : Voted 166;B ∆
+A: Send to B : Voted 166;B A
+E: Send to B : Voted 166;B E
+B: Announce Success Decree 1;E
+Γ: Announce NextBallot 166;Γ
+∆: Send to Γ : LastVote 166;Γ (V (Vote {a'bal = 166;B, a'dec = Decree 1;E, a'pst = ∆}))
+B: Send to Γ : LastVote 166;Γ (V (Vote {a'bal = 166;B, a'dec = Decree 1;E, a'pst = B}))
+E: Announce NextBallot 167;E
+∆: Send to E : LastVote 167;E (V (Vote {a'bal = 166;B, a'dec = Decree 1;E, a'pst = ∆}))
+Γ: Send to E : LastVote 167;E (V (Vote {a'bal = 165;B, a'dec = Decree 1;E, a'pst = Γ}))
+B: Send to E : LastVote 167;E (V (Vote {a'bal = 166;B, a'dec = Decree 1;E, a'pst = B}))
+E: Announce BeginBallot 167;E Decree 1;E
+∆: Send to E : Voted 167;E ∆
+B: Send to E : Voted 167;E B
+Γ: Send to E : Voted 167;E Γ
+E: Announce Success Decree 1;E
+B: Announce NextBallot 168;B
+∆: Send to B : LastVote 168;B (V (Vote {a'bal = 167;E, a'dec = Decree 1;E, a'pst = ∆}))
+Γ: Send to B : LastVote 168;B (V (Vote {a'bal = 167;E, a'dec = Decree 1;E, a'pst = Γ}))
+E: Send to B : LastVote 168;B (V (Vote {a'bal = 167;E, a'dec = Decree 1;E, a'pst = E}))
+A: Send to B : LastVote 168;B (V (Vote {a'bal = 166;B, a'dec = Decree 1;E, a'pst = A}))
+B: Announce BeginBallot 168;B Decree 1;E
+A: Send to B : Voted 168;B A
+∆: Send to B : Voted 168;B ∆
+E: Send to B : Voted 168;B E
+Γ: Send to B : Voted 168;B Γ
+B: Announce Success Decree 1;E
+A: Announce NextBallot 169;A
+B: Send to A : LastVote 169;A (V (Vote {a'bal = 168;B, a'dec = Decree 1;E, a'pst = B}))
+∆: Announce NextBallot 169;∆
+A: Send to ∆ : LastVote 169;∆ (V (Vote {a'bal = 168;B, a'dec = Decree 1;E, a'pst = A}))
+B: Send to ∆ : LastVote 169;∆ (V (Vote {a'bal = 168;B, a'dec = Decree 1;E, a'pst = B}))
+Γ: Announce NextBallot 169;Γ
+E: Announce NextBallot 169;E
+B: Announce NextBallot 170;B
+∆: Send to B : LastVote 170;B (V (Vote {a'bal = 168;B, a'dec = Decree 1;E, a'pst = ∆}))
+E: Send to B : LastVote 170;B (V (Vote {a'bal = 168;B, a'dec = Decree 1;E, a'pst = E}))
+Γ: Send to B : LastVote 170;B (V (Vote {a'bal = 168;B, a'dec = Decree 1;E, a'pst = Γ}))
+B: Announce BeginBallot 170;B Decree 1;E
+∆: Send to B : Voted 170;B ∆
+E: Send to B : Voted 170;B E
+Γ: Send to B : Voted 170;B Γ
+B: Announce Success Decree 1;E
+∆: Announce NextBallot 171;∆
+Γ: Send to ∆ : LastVote 171;∆ (V (Vote {a'bal = 170;B, a'dec = Decree 1;E, a'pst = Γ}))
+E: Send to ∆ : LastVote 171;∆ (V (Vote {a'bal = 170;B, a'dec = Decree 1;E, a'pst = E}))
+Γ: Announce NextBallot 172;Γ
+∆: Send to Γ : LastVote 172;Γ (V (Vote {a'bal = 170;B, a'dec = Decree 1;E, a'pst = ∆}))
+E: Send to Γ : LastVote 172;Γ (V (Vote {a'bal = 170;B, a'dec = Decree 1;E, a'pst = E}))
+E: Announce NextBallot 173;E
+A: Send to E : LastVote 173;E (V (Vote {a'bal = 168;B, a'dec = Decree 1;E, a'pst = A}))
+Γ: Send to E : LastVote 173;E (V (Vote {a'bal = 170;B, a'dec = Decree 1;E, a'pst = Γ}))
+∆: Send to E : LastVote 173;E (V (Vote {a'bal = 170;B, a'dec = Decree 1;E, a'pst = ∆}))
+B: Send to E : LastVote 173;E (V (Vote {a'bal = 170;B, a'dec = Decree 1;E, a'pst = B}))
+E: Announce BeginBallot 173;E Decree 1;E
+A: Send to E : Voted 173;E A
+B: Send to E : Voted 173;E B
+∆: Send to E : Voted 173;E ∆
+Γ: Send to E : Voted 173;E Γ
+E: Announce Success Decree 1;E
+B: Announce NextBallot 174;B
+A: Send to B : LastVote 174;B (V (Vote {a'bal = 173;E, a'dec = Decree 1;E, a'pst = A}))
+∆: Send to B : LastVote 174;B (V (Vote {a'bal = 173;E, a'dec = Decree 1;E, a'pst = ∆}))
+Γ: Send to B : LastVote 174;B (V (Vote {a'bal = 173;E, a'dec = Decree 1;E, a'pst = Γ}))
+E: Send to B : LastVote 174;B (V (Vote {a'bal = 173;E, a'dec = Decree 1;E, a'pst = E}))
+B: Announce BeginBallot 174;B Decree 1;E
+∆: Send to B : Voted 174;B ∆
+Γ: Send to B : Voted 174;B Γ
+A: Send to B : Voted 174;B A
+B: Announce Success Decree 1;E
+E: Send to B : Voted 174;B E
+E: Announce NextBallot 175;E
+Γ: Send to E : LastVote 175;E (V (Vote {a'bal = 174;B, a'dec = Decree 1;E, a'pst = Γ}))
+∆: Send to E : LastVote 175;E (V (Vote {a'bal = 174;B, a'dec = Decree 1;E, a'pst = ∆}))
+A: Send to E : LastVote 175;E (V (Vote {a'bal = 174;B, a'dec = Decree 1;E, a'pst = A}))
+B: Send to E : LastVote 175;E (V (Vote {a'bal = 174;B, a'dec = Decree 1;E, a'pst = B}))
+E: Announce BeginBallot 175;E Decree 1;E
+B: Send to E : Voted 175;E B
+A: Send to E : Voted 175;E A
+Γ: Send to E : Voted 175;E Γ
+∆: Send to E : Voted 175;E ∆
+E: Announce Success Decree 1;E
+B: Announce NextBallot 176;B
+A: Send to B : LastVote 176;B (V (Vote {a'bal = 175;E, a'dec = Decree 1;E, a'pst = A}))
+Γ: Send to B : LastVote 176;B (V (Vote {a'bal = 175;E, a'dec = Decree 1;E, a'pst = Γ}))
+∆: Send to B : LastVote 176;B (V (Vote {a'bal = 175;E, a'dec = Decree 1;E, a'pst = ∆}))
+E: Send to B : LastVote 176;B (V (Vote {a'bal = 175;E, a'dec = Decree 1;E, a'pst = E}))
+B: Announce BeginBallot 176;B Decree 1;E
+A: Send to B : Voted 176;B A
+∆: Send to B : Voted 176;B ∆
+E: Send to B : Voted 176;B E
+Γ: Send to B : Voted 176;B Γ
+B: Announce Success Decree 1;E
+Γ: Announce NextBallot 177;Γ
+E: Send to Γ : LastVote 177;Γ (V (Vote {a'bal = 176;B, a'dec = Decree 1;E, a'pst = E}))
+B: Send to Γ : LastVote 177;Γ (V (Vote {a'bal = 176;B, a'dec = Decree 1;E, a'pst = B}))
+A: Send to Γ : LastVote 177;Γ (V (Vote {a'bal = 176;B, a'dec = Decree 1;E, a'pst = A}))
+∆: Send to Γ : LastVote 177;Γ (V (Vote {a'bal = 176;B, a'dec = Decree 1;E, a'pst = ∆}))
+Γ: Announce BeginBallot 177;Γ Decree 1;E
+E: Send to Γ : Voted 177;Γ E
+∆: Send to Γ : Voted 177;Γ ∆
+B: Send to Γ : Voted 177;Γ B
+A: Send to Γ : Voted 177;Γ A
+Γ: Announce Success Decree 1;E
+∆: Announce NextBallot 178;∆
+B: Send to ∆ : LastVote 178;∆ (V (Vote {a'bal = 177;Γ, a'dec = Decree 1;E, a'pst = B}))
+A: Send to ∆ : LastVote 178;∆ (V (Vote {a'bal = 177;Γ, a'dec = Decree 1;E, a'pst = A}))
+E: Send to ∆ : LastVote 178;∆ (V (Vote {a'bal = 177;Γ, a'dec = Decree 1;E, a'pst = E}))
+∆: Announce BeginBallot 178;∆ Decree 1;E
+A: Send to ∆ : Voted 178;∆ A
+B: Send to ∆ : Voted 178;∆ B
+E: Send to ∆ : Voted 178;∆ E
+∆: Announce Success Decree 1;E
+E: Announce NextBallot 179;E
+B: Send to E : LastVote 179;E (V (Vote {a'bal = 178;∆, a'dec = Decree 1;E, a'pst = B}))
+Γ: Send to E : LastVote 179;E (V (Vote {a'bal = 177;Γ, a'dec = Decree 1;E, a'pst = Γ}))
+A: Send to E : LastVote 179;E (V (Vote {a'bal = 178;∆, a'dec = Decree 1;E, a'pst = A}))
+E: Announce BeginBallot 179;E Decree 1;E
+B: Send to E : Voted 179;E B
+Γ: Send to E : Voted 179;E Γ
+A: Send to E : Voted 179;E A
+E: Announce Success Decree 1;E
+Γ: Announce NextBallot 180;Γ
+B: Send to Γ : LastVote 180;Γ (V (Vote {a'bal = 179;E, a'dec = Decree 1;E, a'pst = B}))
+∆: Send to Γ : LastVote 180;Γ (V (Vote {a'bal = 178;∆, a'dec = Decree 1;E, a'pst = ∆}))
+A: Send to Γ : LastVote 180;Γ (V (Vote {a'bal = 179;E, a'dec = Decree 1;E, a'pst = A}))
+Γ: Announce BeginBallot 180;Γ Decree 1;E
+A: Send to Γ : Voted 180;Γ A
+∆: Send to Γ : Voted 180;Γ ∆
+B: Send to Γ : Voted 180;Γ B
+Γ: Announce Success Decree 1;E
+B: Announce NextBallot 181;B
+∆: Send to B : LastVote 181;B (V (Vote {a'bal = 180;Γ, a'dec = Decree 1;E, a'pst = ∆}))
+A: Send to B : LastVote 181;B (V (Vote {a'bal = 180;Γ, a'dec = Decree 1;E, a'pst = A}))
+Γ: Send to B : LastVote 181;B (V (Vote {a'bal = 180;Γ, a'dec = Decree 1;E, a'pst = Γ}))
+B: Announce BeginBallot 181;B Decree 1;E
+Γ: Send to B : Voted 181;B Γ
+∆: Send to B : Voted 181;B ∆
+A: Send to B : Voted 181;B A
+B: Announce Success Decree 1;E
+B: Announce NextBallot 182;B
+A: Send to B : LastVote 182;B (V (Vote {a'bal = 181;B, a'dec = Decree 1;E, a'pst = A}))
+Γ: Announce NextBallot 182;Γ
+A: Send to Γ : LastVote 182;Γ (V (Vote {a'bal = 181;B, a'dec = Decree 1;E, a'pst = A}))
+B: Send to Γ : LastVote 182;Γ (V (Vote {a'bal = 181;B, a'dec = Decree 1;E, a'pst = B}))
+B: Announce NextBallot 183;B
+E: Send to B : LastVote 183;B (V (Vote {a'bal = 179;E, a'dec = Decree 1;E, a'pst = E}))
+∆: Send to B : LastVote 183;B (V (Vote {a'bal = 181;B, a'dec = Decree 1;E, a'pst = ∆}))
+∆: Announce NextBallot 184;∆
+E: Send to ∆ : LastVote 184;∆ (V (Vote {a'bal = 179;E, a'dec = Decree 1;E, a'pst = E}))
+Γ: Announce NextBallot 183;Γ
+A: Announce NextBallot 183;A

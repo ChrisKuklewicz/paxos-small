@@ -1,0 +1,60 @@
+A: Announce NextBallot 0;A
+Messenger dropped: (E,Missive {from = A, message = NextBallot 0;A})
+B: Send to A : LastVote 0;A (VNull B)
+∆: Announce NextBallot 0;∆
+Messenger dropped: (E,Missive {from = ∆, message = NextBallot 0;∆})
+B: Send to ∆ : LastVote 0;∆ (VNull B)
+B: Announce NextBallot 1;B
+Γ: Announce NextBallot 0;Γ
+A: Announce NextBallot 1;A
+Messenger dropped: (Γ,Missive {from = A, message = NextBallot 1;A})
+Messenger dropped: (∆,Missive {from = A, message = NextBallot 1;A})
+Γ: Announce NextBallot 1;Γ
+Messenger dropped: (E,Missive {from = Γ, message = NextBallot 1;Γ})
+A: Send to Γ : LastVote 1;Γ (VNull A)
+B: Send to Γ : LastVote 1;Γ (VNull B)
+∆: Send to Γ : LastVote 1;Γ (VNull ∆)
+Γ: Announce BeginBallot 1;Γ Decree 1;Γ
+Messenger dropped: (B,Missive {from = Γ, message = BeginBallot 1;Γ Decree 1;Γ})
+Messenger dropped: (E,Missive {from = Γ, message = BeginBallot 1;Γ Decree 1;Γ})
+Messenger dropped: (∆,Missive {from = Γ, message = BeginBallot 1;Γ Decree 1;Γ})
+A: Send to Γ : Voted 1;Γ A
+Messenger dropped: (Γ,Missive {from = A, message = Voted 1;Γ A})
+E: Announce NextBallot 0;E
+Messenger dropped: (∆,Missive {from = E, message = NextBallot 0;E})
+∆: Announce NextBallot 2;∆
+Messenger dropped: (B,Missive {from = ∆, message = NextBallot 2;∆})
+Messenger dropped: (E,Missive {from = ∆, message = NextBallot 2;∆})
+A: Send to ∆ : LastVote 2;∆ (V (Vote {a'bal = 1;Γ, a'dec = Decree 1;Γ, a'pst = A}))
+Γ: Send to ∆ : LastVote 2;∆ (V (Vote {a'bal = 1;Γ, a'dec = Decree 1;Γ, a'pst = Γ}))
+E: Announce NextBallot 1;E
+Messenger dropped: (Γ,Missive {from = E, message = NextBallot 1;E})
+Messenger dropped: (∆,Missive {from = E, message = NextBallot 1;E})
+∆: Announce NextBallot 3;∆
+Messenger dropped: (B,Missive {from = ∆, message = NextBallot 3;∆})
+E: Send to ∆ : LastVote 3;∆ (VNull E)
+Γ: Send to ∆ : LastVote 3;∆ (V (Vote {a'bal = 1;Γ, a'dec = Decree 1;Γ, a'pst = Γ}))
+A: Announce NextBallot 3;A
+Messenger dropped: (B,Missive {from = A, message = NextBallot 3;A})
+B: Announce NextBallot 2;B
+Messenger dropped: (∆,Missive {from = B, message = NextBallot 2;B})
+∆: Announce NextBallot 4;∆
+B: Send to ∆ : LastVote 4;∆ (VNull B)
+Γ: Send to ∆ : LastVote 4;∆ (V (Vote {a'bal = 1;Γ, a'dec = Decree 1;Γ, a'pst = Γ}))
+Messenger dropped: (∆,Missive {from = Γ, message = LastVote 4;∆ (V (Vote {a'bal = 1;Γ, a'dec = Decree 1;Γ, a'pst = Γ}))})
+E: Announce NextBallot 4;E
+Γ: Announce NextBallot 5;Γ
+E: Send to Γ : LastVote 5;Γ (VNull E)
+∆: Send to Γ : LastVote 5;Γ (VNull ∆)
+B: Send to Γ : LastVote 5;Γ (VNull B)
+Γ: Announce BeginBallot 5;Γ Decree 5;Γ
+∆: Send to Γ : Voted 5;Γ ∆
+B: Send to Γ : Voted 5;Γ B
+E: Send to Γ : Voted 5;Γ E
+Γ: Announce Success Decree 5;Γ
+Messenger dropped: (B,Missive {from = Γ, message = Success Decree 5;Γ})
+Γ: Retire Γ
+E: Retire E
+∆: Retire ∆
+B: Retire B
+A: Retire A
